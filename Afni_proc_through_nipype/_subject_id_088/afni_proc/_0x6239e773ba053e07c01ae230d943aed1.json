@@ -1,0 +1,25 @@
+[
+    [
+        "command",
+        [
+            "/home/jlefortb/narps_open_pipelines/narps_open/pipelines/team_6VV2.firstlevel",
+            "d24bc0377b166d70c1e7e74f97b48e4b"
+        ]
+    ],
+    [
+        "data_dir",
+        "/home/jlefortb/narps_open_pipelines/data/original/ds001734/"
+    ],
+    [
+        "function_str",
+        "def run(command, results_dir, subject, data_dir):\n    import subprocess\n    subject= \"sub-{}\".format(subject)\n    subprocess.run([command, results_dir, subject, data_dir])\n    print(\"Done\")\n"
+    ],
+    [
+        "results_dir",
+        "/home/jlefortb/narps_open_pipelines/data/results/derived/team_6VV2_afni/firstlevel/"
+    ],
+    [
+        "subject",
+        "088"
+    ]
+]

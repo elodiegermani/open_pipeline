@@ -1,0 +1,24 @@
+[
+    [
+        "base_directory",
+        "."
+    ],
+    [
+        "force_lists",
+        false
+    ],
+    [
+        "raise_on_empty",
+        true
+    ],
+    [
+        "sort_filelist",
+        true
+    ],
+    [
+        "needed_outputs",
+        [
+            "command"
+        ]
+    ]
+]

@@ -1,0 +1,175 @@
+#!/bin/tcsh
+
+# created by team I9D6, reproduced by Narps reproducibility team
+# creation date: 22 June 2023
+# read and ran by team_I9D6.py script
+# version afni used by the team : AFNI Version 19.0.24 Tiberius
+# version afni used by the reproducibility team :AFNI Version 23.0.02 Commodus
+# Last update: June 2023
+
+# Store arguments (directory where to store results, subjects list, directory where data are stored)
+set expdir="$1"
+set subject="$2"
+set datadir="$3"
+
+"""
+https://osf.io/bvs2f
+
+Brain extraction and non-linear registration to the MNI152_2009 template were done with AFNI's @SSwarper script. Prior to brain extraction, the images were deobliqued with 3dWarp and intensity normalized with 3dUnifize, so @SSwarper was run with the -unifize_off flag.
+1.        AFNI's 3dWarp was used to apply the obliquity transformation to the T1's, needed to keep AFNI and FreeSurfer in register.
+2.        AFNI's 3dUnifize was run to uniform-ize the T1w volume intensities, to provide assistance to FreeSurfer.
+3.        Freesurfer processing of anatomical T1w datasets, to define white matter and other ROIs
+4.        AFNI's @SSwarper was applied to skull-strip each anatomical and to estimate a nonlinear warp to a standard space target (MNI152NLin2009cAsym).
+5.        AFNI's afni_proc.py blocks:
+tshift:   slice timing alignment on volumes,  
+align:   linear affine alignment of  EPI and anatomy,  
+tlrc:      warp anat to standard space (using @SSwarper results),  
+volreg:  EPI registration, plus concatenating and applying 'align' and 'tlrc' transformations to produce the final EPI time series in MNI space,
+mask:   create a 'brain' mask from the EPI data for later use, 
+scale:   voxelwise scaling of each EPI run mean to 100, for each voxel , 
+regress: time series regression analysis.
+
+Freesurfer segmentation with -3T flag:
+recon-all -all -sd $cwd -subjid $sid -3T        \
+          -i $indata_root/$sid/${sid}_T1w-deobl_nu.nii.gz
+
+The utilized “tissue classes” were specific ROIs selected from the list labeled by FS.  These were the ROIs defined to be WM in AFNI’s @SUMA_renumber_FS: Left-Cerebral-White-Matter, Left-Cerebellum-White-Matter, Right-Cerebral-White-Matter, Right-Cerebellum-White-Matter, WM-hypointensities, CC_Posterior, CC_Mid_Posterior, CC_Central, CC_Mid_Anterior, CC_Anterior. (This WM mask was later used for the ANATICOR calculations.)
+
+Slice time correction done by AFNI's 3dTshift as setup by the tshift block in the afni_proc.py command, which uses 5th order Lagrange polynomial interpolation. This was done before motion correction.  Slice #0 was used for the reference, to keep nominal volume times in sync with stimulus timing.
+
+Motion correction was done using 3dvolreg using 6-parameter rigid transformations.
+
+The reference scan is the “MIN_OUTLIER” volume (volume in the time series with fewest number of outliers detected using 3dToutcount, pre-motion correction, to minimize risk of selecting a high-motion time point). 
+
+The similarity metric is weighted least squares, to determine the 6 rigid body motion parameters and the accompanying coordinate transformation matrix for each time point.
+
+Interpolation type is “cubic” when determining the motion parameters.  The interpolation type of "wsinc5" (weighted sinc, ±5 voxel neighborhood) was applied to the EPI when the combined transformation to MNI space was applied: the EPI➝ref➝anat➝(NL)MNI template transformations were combined to allow a single interpolation from the original EPI time series to the MNI analysis space.
+
+Function-to-structure (T1w) registration done by AFNI's align_epi_anat.py script as setup by the align block in afni_proc.py, with these additional parameters: -giant_move -cost lpc+ZZ -check_flip. These options specify to search a larger range of rotations (giant_move), use a constrained local Pearson correlation cost function (lpc+ZZ: https://www.ncbi.nlm.nih.gov/pubmed/18976717), and check to see if the EPI has been flipped relative to the anatomical (this happens 😟). This transformation is a 12 parameter linear affine matrix. 
+
+T1-weighted volumes were first deobliqued and intensity normalized before brain extraction and non-linear registration to the MNI152_2009 template MNI152NLin2009cAsym space) were done with AFNI's @SSwarper script.  Both the subject T1 and template volumes were at 1 mm resolution.
+@SSwarper -input                                       \
+        $indata_root/$sid/${sid}_T1w-deobl_nu.nii.gz   \
+        -unifize_off                                   \
+        -base MNI152_2009_template_SSW.nii.gz          \
+        -subid $sid                                    \
+        -odir . 
+
+Here are the steps in the @SSwarper script:
+  #1: Uniform-ize the T1-weighted volume intensity (3dUnifize) - skipped (already done)
+  #2: Strip the skull (3dSkullStrip), with mildly aggressive settings.
+  #3: Nonlinearly warp (3dQwarp) the result from #1 to the skull-on
+      template, driving the warping to a medium level of refinement.
+  #4: Use a slightly dilated brain mask from the template to
+      crop off any non-brain tissue resulting from #3 (3dcalc).
+  #5: Warp the output of #4 back to original anatomical space,
+      along with the template brain mask, and combine those
+      with the output of #2 to get a better skull-stripped
+      result in original space (3dNwarpApply and 3dcalc).
+  #6: Restart the nonlinear warping, registering the output
+      of #5 to the skull-off template brain volume (3dQwarp).
+  #7: Use @snapshot_volreg3 to make pretty pictures for QC.
+The nonlinear warp computed in 3dQwarp (and applied to the EPI data in 3dNwarpApply) is computed incrementally using a set of overlapping 3D polynomial patches. As the patches are refined, more parameters are introduced. However, the many thousands of parameters defining the polynomial patches are not saved; rather, the warp is stored as a non-parametric displacement field in a 3-volume NiFTI datasets. Program 3dNwarpApply uses such a warp dataset to transform other 3D datasets in the same fashion (and can catenate warps and matrices on-the-fly); its default interpolation method is weighted sinc, but lower order methods are also available (e.g., NN for warping ROI labels).
+
+We used AFNI's 3dUnifize for T1w intensity correction.  Command:
+   3dUnifize -GM -clfrac 0.4 -Urad 30           \
+               -input  ${sid}_T1w-deobl.nii.gz   \
+               -prefix ${sid}_T1w-deobl_nu.nii.gz
+
+We ran Freesurfer with the -3T flag which runs nu intensity correction, in the creation of a white matter mask for each subject.
+
+The “scale” block  was utilized in afni_proc.py, which scales the mean of each EPI voxel time series to 100; that is, the voxels are scaled separately, not the volumes as a whole.  The fluctuations in the resulting time series have an interpretation of local (BOLD) % signal change. Values are truncated to a range of [0,200].
+
+Nuisance regression was done including the motion parameters and local white matter voxelwise regressors.
+The 6 rigid-body motion parameters (estimated in 3dvolreg) were included, one set of 6 per run.
+
+Local white matter tissue signals were were included in the regression model set up by the afni_proc.py script as specified by the flags “-regress_anaticor_fast” and "-regress_anaticor_fwhm 20”. The local signal from the eroded white matter is computed summing each EPI volume over the nearby white matter voxels weighted by a Gaussian decay, in this case with a full width half max of 20 mm (https://www.ncbi.nlm.nih.gov/pubmed/20420926).  Each EPI voxel time series thus gets a separate ANATICOR regressor, in addition to the usual (global) motion parameter regressors. (The time series regression analysis program 3dREMLfit can deal with voxelwise regressors.)
+
+Censoring is done with AFNI as part of the regress step
+Criteria:
++ the Euclidean norm (enorm) of the 6 motion parameters first temporal differences is calculated, and where enorm is greater than a threshold (here, 0.3 ~mm), both that volume and the preceding one are censored.
++ the fraction of outliers in each (automasked) volume is calculated, and where the fraction is greater than a threshold (here, 0.05), that volume is censored from the regression model.
+In most cases, censoring due to excessive “outliers” in a volume coincides with censoring due to excessive motion -- but not always. Both methods are used to be safe.
+
+No spatial smoothing was applied here during single subject processing.
+
+Spatial smoothing was applied later (to the individual subject-level effect size estimates “betas”) as part of AFNI's ETAC form of running 3dttest++ for group analysis and clustering, where it applied several different blurs (here, 0, 4, 6, and 8mm Gaussian FWHM applied inside the brain mask using an iterative approach), before combining those results to maintain an overall FPR.
+
+The list of subjects with number of retained TRs, percent of time points censored, and list of censored TRs is available in the spreadsheet here:
+https://docs.google.com/spreadsheets/d/1_T_Y7xaaTV4O-AyUd-kN4hACCMJOAYuUFDqSy1WOcTw/edit?usp=sharing
+The subjects not including in the group analysis were those shown in the output of:
+  gen_ss_review_table.py                                    \
+  -outlier_sep space                                          \
+  -report_outliers 'censor fraction' GE 0.1                   \
+              -report_outliers 'average censored motion' GE 0.1           \
+              -report_outliers 'max censored displacement' GE 8           \
+              -infiles sub*/s*.results/out.ss*.txt
+
+
+We modelled the task using a canonical (only) basis function, AFNI's BLOCK model (an integrated gamma variate function), using response times as the individual event durations.  HRF peaks varied, according to the convolution with the response times.
+We used the following independent variables:
+- for trials with a response, BLOCK, with duration equal to response time, and amplitude modulation parameters (leading to automatically generated parametrically modulated regressors) for gain and loss in dollars
+- for trials without a response, BLOCK, with duration of 4 s (the total period in which a subject could respond)
+Nuisance regressors:
+- A Gaussian weighted local neighborhood of white matter (ANATICOR), leading to 1 voxel-dependent regressor 
+- Six motion parameters (degrees and mm) per run
+- The baseline and temporal drift was modeled as Legendre polynomials of order 4, including 5 regressors per run.
+- Generalized linear least squares (GLSQ) regression was carried out, with the temporal noise autocovariance modeled with voxelwise ARMA(1,1) parameters estimated from the GLSQ residuals at each voxel (i.e, REML).
+
+
+The 9 hypotheses were evaluated with 4 group-level whole-brain two-sided t-tests and 1 between group test. The 4 whole-brain tests will be:
+  - Parametric effect of gain in the equal indifference group
+  - Parametric effect of gain in the equal range group
+  - Parametric effect of loss in the equal indifference group
+  - Parametric effect of loss in the equal range group
+The between group test was a two-sided test of difference in the parametric effect of loss between the indifference group and the equal range group.
+
+"""
+
+afni_proc.py \
+  -script ${expdir}/proc.${subject}.block \
+  -scr_overwrite \
+  -subj_id ${subject} \
+  -out_dir ${expdir}/${subject}.results.block \
+  -dsets ${datadir}/${subject}/func/${subject}_task-MGT_run-01_bold.nii.gz \
+    ${datadir}/${subject}/func/${subject}_task-MGT_run-02_bold.nii.gz \
+    ${datadir}/${subject}/func/${subject}_task-MGT_run-03_bold.nii.gz \
+    ${datadir}/${subject}/func/${subject}_task-MGT_run-04_bold.nii.gz \
+  -copy_anat ${datadir}/${subject}/anat/${subject}_T1w.nii.gz \
+  -anat_has_skull yes \
+  -blocks tshift align tlrc volreg mask scale regress \
+  -despike_new yes \
+  -tlrc_base MNI152_T1_2009c+tlrc \
+  -tlrc_NL_warp \
+  -align_opts_aea \
+  -giant_move \
+  -cost lpc+ZZ \
+  -volreg_align_to MIN_OUTLIER \
+  -volreg_tlrc_warp \
+  -volreg_align_e2a \
+  -blur_in_automask \
+  -regress_stim_times \
+    ${datadir}/${subject}/func/times+gain.1D \
+    ${datadir}/${subject}/func/times+loss.1D \
+  -regress_stim_types AM2 \
+  -regress_stim_labels \
+    GAIN \
+    LOSS \
+  -regress_basis \
+    'BLOCK(4,1)' \
+  -mask_apply anat \
+  -regress_motion_per_run \
+  -test_stim_files no \
+  -regress_opts_3dD \
+    -GOFORIT 8 \
+    -jobs 6 \
+  -regress_censor_motion 0.2 \
+  -regress_apply_mot_types demean deriv \
+  -regress_censor_first_trs 3 \
+  -regress_est_blur_errts \
+  -execute
+
+
+
+
+ 

@@ -1,0 +1,111 @@
+#!/bin/tcsh
+
+# Reproduction of 27SS pipeline by the Narps reproducibility team
+# creation date: 13 February 2024
+# version afni used by the team: AFNI 18.3.12
+# version afni used by the reproducibility team: AFNI Version 23.0.02 Commodus
+
+# Store arguments (directory where to store results, subjects list, directory where data are stored)
+set expdir="$1" # /home/jlefortb/narps_open_pipelines/data/results/team_27SS_afni/firstlevel/
+set subject="$2" # sub-001
+set datadir="$3" # /home/jlefortb/narps_open_pipelines/data/original/ds001734/
+
+# In a terminal, path /home/jlefortb/narps_open_pipelines, run:
+# /home/jlefortb/narps_open_pipelines/narps_open/pipelines/team_27SS.firstlevel /home/jlefortb/narps_open_pipelines/data/results/team_27SS_afni/firstlevel/, sub-001, /home/jlefortb/narps_open_pipelines/data/original/ds001734/
+
+
+
+
+# Store arguments (directory where to store results, subjects list, directory where data are stored)
+set expdir="$1"
+set subject="$2"
+set datadir="$3"
+
+
+afni_proc.py \
+  # Spécification du script de sortie
+  -script ${expdir}/proc.${subject}.block \
+  # Autoriser l'écrasement du script existant
+  -scr_overwrite \
+  # Spécification de l'identifiant du sujet
+  -subj_id ${subject} \
+  # Spécification du répertoire de sortie
+  -out_dir ${expdir}/${subject}.results.block \
+  # Spécification des ensembles de données EPI
+  -dsets ${datadir}/${subject}/func/${subject}_task-MGT_run-01_bold.nii.gz \
+    ${datadir}/${subject}/func/${subject}_task-MGT_run-02_bold.nii.gz \
+    ${datadir}/${subject}/func/${subject}_task-MGT_run-03_bold.nii.gz \
+    ${datadir}/${subject}/func/${subject}_task-MGT_run-04_bold.nii.gz \
+  # Copie de l'image anatomique
+  -copy_anat ${datadir}/${subject}/anat/${subject}_T1w.nii.gz \
+  # Spécification de la présence du crâne dans l'image anatomique
+  -anat_has_skull yes \
+  # Blocs de prétraitement inclus dans le pipeline
+  -blocks despike tshift align tlrc volreg blur mask scale regress \
+  # Option de déspike
+  -despike_new yes \
+  # Spécification de la base TLRC
+  -tlrc_base MNI152_T1_2009c+tlrc \
+  #  Specify blur size
+  -blur_size  6.0 \
+  # Options d'alignement
+  -align_opts_aea \
+  # Déplacement géant
+  -giant_move \
+  # Coût de l'alignement
+  -cost lpc+ZZ \
+  # Options for temporal shift
+  -tshift_opts_ts -quintic \
+  # Alignement des volumes EPI sur l'outlier minimal
+  -volreg_align_to MIN_OUTLIER \
+  # Interpolation method for volume registration
+  -volreg_interp cubic \
+  # Alignement EPI vers anatomique
+  -volreg_align_e2a \
+  # Flou dans le masque automatique
+  -blur_in_automask \
+  # Model motion per run
+  -regress_motion_per_run \
+  # Censor motion outliers with framewise displacement greater than  1.5 mm
+  -regress_censor_motion  1.5 \
+  # Specify the regressors and their corresponding labels
+  -regress_stim_times \
+    ${datadir}/${subject}/func/times+gain.1D \
+    ${datadir}/${subject}/func/times+loss.1D \
+  -regress_stim_labels task nuisance \
+  # Modélisation des régresseurs de stimulus
+  -regress_basis 'BLOCK(4,1)' \
+  # Application du masque anatomique
+  -mask_apply anat \
+  # Options supplémentaires pour 3dDeconvolve
+  -regress_opts_3dD \
+    -GOFORIT 8 \
+    -jobs 6 \
+    -ortvec ${datadir}/${subject}/func/motion_parameters.1D motion_params \
+    -allzero_OK \
+  # Application des types de mouvement pour la régression
+  -regress_apply_mot_types demean \
+  # Censure des premiers TRs
+  -regress_censor_first_trs 3 \
+  # Estimation des erreurs de flou
+  # Estimate the blur epochs
+  -regress_est_blur_epits \
+  # Estimate the blur error times
+  -regress_est_blur_errts \
+  # Exécution du pipeline directement après création du script TCSH
+
+  # No gradient distortion correction specified
+  # No distortion correction specified
+  # No intensity correction specified
+  # No intensity normalization specified
+  # No spatial smoothing specified
+  # Execute the pipeline script
+#   -execute
+
+# # extract beta values
+# 3dbucket -prefix GAIN ${expdir}/${subject}.results.block/stats.sub-001+tlrc.BRIK[3]
+# 3dbucket -prefix LOSS ${expdir}/${subject}.results.block/stats.sub-001+tlrc.BRIK[8]
+
+# # convert BRIK to nii
+# 3dAFNItoNIFTI -prefix GAIN ${subject}_GAIN+tlrc
+# 3dAFNItoNIFTI -prefix LOSS ${subject}_LOSS+tlrc
