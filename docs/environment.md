@@ -52,10 +52,11 @@ docker run -it \
 Then, from inside the container :
 
 ```bash
+pip install .[examples]
 jupyter notebook --port=8888 --no-browser --ip=0.0.0.0
 ```
 
-You can now access Jupyter using the address provided by the command line.
+You can now access Jupyter using the address provided by the jupyter command line.
 
 > [!NOTE]  
 > Find useful information on the [Docker documentation page](https://docs.docker.com/get-started/). Here is a [cheat sheet with Docker commands](https://docs.docker.com/get-started/docker_cheatsheet.pdf)
