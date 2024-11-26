@@ -1,0 +1,107 @@
+#!/bin/tcsh
+
+# created by team 6VV2, reproduced by Narps reproducibility team
+# creation date: 22 June 2023
+# read and ran by team_6VV2.py script
+# version afni used by the team : AFNI Version 19.0.01 Tiberius
+# version afni used by the reproducibility team :AFNI Version 23.0.02 Commodus
+# Last update: June 2023
+
+
+# exemple run:
+# In a terminal, path /home/jlefortb/narps_open_pipelines, run:
+# tcsh /home/jlefortb/narps_open_pipelines/narps_open/pipelines/team_6VV2.firstlevel /home/jlefortb/narps_open_pipelines/data/results/team_6VV2_afni/firstlevel/, sub-001, /home/jlefortb/narps_open_pipelines/data/original/ds001734/
+
+
+
+
+# Store arguments (directory where to store results, subjects list, directory where data are stored)
+set expdir="$1"
+set subject="$2"
+set datadir="$3"
+
+
+afni_proc.py \
+  -script ${expdir}/proc.${subject}.block \
+  -scr_overwrite \
+  -subj_id ${subject} \
+  -out_dir ${expdir}/${subject}.results.block \
+  -dsets ${datadir}/${subject}/func/${subject}_task-MGT_run-01_bold.nii.gz \
+    ${datadir}/${subject}/func/${subject}_task-MGT_run-02_bold.nii.gz \
+    ${datadir}/${subject}/func/${subject}_task-MGT_run-03_bold.nii.gz \
+    ${datadir}/${subject}/func/${subject}_task-MGT_run-04_bold.nii.gz \
+  -copy_anat ${datadir}/${subject}/anat/${subject}_T1w.nii.gz \
+  -anat_has_skull yes \
+  -blocks despike tshift align tlrc volreg blur mask scale regress \
+  -despike_new yes \
+  -tlrc_base MNI152_T1_2009c+tlrc \
+  -tlrc_NL_warp \
+  -align_opts_aea \
+  -giant_move \
+  -cost lpc+ZZ \
+  -volreg_align_to MIN_OUTLIER \
+  -volreg_tlrc_warp \
+  -volreg_align_e2a \
+  -blur_in_automask \
+  -regress_stim_times \
+    ${datadir}/${subject}/func/times+gain.1D \
+    ${datadir}/${subject}/func/times+loss.1D \
+  -regress_stim_types AM2 \
+  -regress_stim_labels \
+    GAIN \
+    LOSS \
+  -regress_basis \
+    'BLOCK(4,1)' \
+  -mask_apply anat \
+  -regress_motion_per_run \
+  -test_stim_files no \
+  -regress_opts_3dD \
+    -GOFORIT 8 \
+    -jobs 6 \
+  -regress_censor_motion 0.2 \
+  -regress_apply_mot_types demean deriv \
+  -regress_censor_first_trs 3 \
+  -regress_est_blur_errts \
+  # -execute
+
+
+# # extract beta values
+# 3dbucket -prefix GAIN ${expdir}/${subject}.results.block/stats.sub-001+tlrc.BRIK[3]
+# 3dbucket -prefix LOSS ${expdir}/${subject}.results.block/stats.sub-001+tlrc.BRIK[8]
+
+# # convert BRIK to nii
+# 3dAFNItoNIFTI -prefix GAIN ${subject}_GAIN+tlrc
+# 3dAFNItoNIFTI -prefix LOSS ${subject}_LOSS+tlrc
+
+
+
+# run this file with "tcsh 6VV2_afni_proc.simple"
+
+# create 1D stimuli file :
+# import pandas as pd 
+
+# df_run1 = pd.read_csv("/home/jlefortb/narps_open_pipelines/data/original/ds001734/sub-001/func/sub-001_task-MGT_run-01_events.tsv", sep="\t")
+# df_run1 = df_run1[["onset", "gain", "loss"]].T
+# df_run2 = pd.read_csv("/home/jlefortb/narps_open_pipelines/data/original/ds001734/sub-001/func/sub-001_task-MGT_run-02_events.tsv", sep="\t")
+# df_run2 = df_run2[["onset", "gain", "loss"]].T
+# df_run3 = pd.read_csv("/home/jlefortb/narps_open_pipelines/data/original/ds001734/sub-001/func/sub-001_task-MGT_run-03_events.tsv", sep="\t")
+# df_run3 = df_run3[["onset", "gain", "loss"]].T
+# df_run4 = pd.read_csv("/home/jlefortb/narps_open_pipelines/data/original/ds001734/sub-001/func/sub-001_task-MGT_run-04_events.tsv", sep="\t")
+# df_run4 = df_run4[["onset", "gain", "loss"]].T
+
+# df_gain = pd.DataFrame(index=range(0,4), columns=range(0,64))
+# df_gain.loc[0] = ["{}*{}".format(df_run1[col].loc['onset'], df_run1[col].loc['gain']) for col in range(0, 64)]
+# df_gain.loc[1] = ["{}*{}".format(df_run2[col].loc['onset'], df_run2[col].loc['gain']) for col in range(0, 64)]
+# df_gain.loc[2] = ["{}*{}".format(df_run3[col].loc['onset'], df_run3[col].loc['gain']) for col in range(0, 64)]
+# df_gain.loc[3] = ["{}*{}".format(df_run4[col].loc['onset'], df_run4[col].loc['gain']) for col in range(0, 64)]
+# df_loss = pd.DataFrame(index=range(0,4), columns=range(0,64))
+# df_loss.loc[0] = ["{}*{}".format(df_run1[col].loc['onset'], df_run1[col].loc['loss']) for col in range(0, 64)]
+# df_loss.loc[1] = ["{}*{}".format(df_run2[col].loc['onset'], df_run2[col].loc['loss']) for col in range(0, 64)]
+# df_loss.loc[2] = ["{}*{}".format(df_run3[col].loc['onset'], df_run3[col].loc['loss']) for col in range(0, 64)]
+# df_loss.loc[3] = ["{}*{}".format(df_run4[col].loc['onset'], df_run4[col].loc['loss']) for col in range(0, 64)]
+
+
+# df_gain.to_csv('/home/jlefortb/narps_open_pipelines/data/original/ds001734/sub-001/func/times+gain.1D', 
+#         sep='\t', index=False, header=False)
+# df_loss.to_csv('/home/jlefortb/narps_open_pipelines/data/original/ds001734/sub-001/func/times+loss.1D', 
+#         sep='\t', index=False, header=False)
