@@ -1,0 +1,30 @@
+#!/bin/tcsh
+
+# created by team 80GC, reproduced by Narps reproducibility team
+# creation date: 22 June 2023
+# read and ran by team_6VV2.py script
+# version afni used by the team : 
+# version afni used by the reproducibility team :AFNI Version 23.0.02 Commodus
+# Last update: June 2023
+
+
+# exemple run:
+# In a terminal, path /home/jlefortb/narps_open_pipelines, run:
+# tcsh /home/jlefortb/narps_open_pipelines/narps_open/pipelines/team_6VV2.firstlevel /home/jlefortb/narps_open_pipelines/data/results/team_6VV2_afni/firstlevel/, sub-001, /home/jlefortb/narps_open_pipelines/data/original/ds001734/
+
+# ------------------------------
+# run the regression analysis
+3dDeconvolve -input /home/jlefortb/narps_open_pipelines/data/original/ds001734/derivatives/fmriprep/sub-001/func/sub-001_task-MGT_run-01_bold_space-MNI152NLin2009cAsym_preproc.nii.gz                        \
+                        \
+    -polort 4 -float                                                     \
+    -num_stimts 2                                                        \
+    -stim_times_AM2 1 stimuli/times+gain.1D 'BLOCK(4,1)'                 \
+    -stim_label 1 GAIN                                                   \
+    -stim_times_AM2 2 stimuli/times+loss.1D 'BLOCK(4,1)'                 \
+    -stim_label 2 LOSS                                                   \
+    -GOFORIT 8                                                           \
+    -jobs 6                                                              \
+    -fout -tout                                \
+    -fitts fitts.$subj                                                   \
+    -errts errts.${subj}                                                 \
+    -bucket stats.$subj

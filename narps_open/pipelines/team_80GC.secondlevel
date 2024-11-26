@@ -1,0 +1,232 @@
+#!/bin/tcsh
+
+# created by team 6VV2, reproduced by Narps reproducibility team
+# creation date: 22 June 2023
+# read and ran by team_6VV2.py script
+# version afni used by the team : AFNI Version 19.0.01 Tiberius
+# version afni used by the reproducibility team :AFNI Version 23.0.02 Commodus
+# Last update: June 2023
+
+
+# Store arguments (directory where to store results)
+set expdir="$1"
+
+3dLME -prefix expdir -jobs 4 \
+-model 'group*cond' \
+-SS_type 3 \
+-ranEff '~1' \
+-num_glt 5 \
+-gltLabel 1 'GAIN_indiff' -gltCode  1 'group : 1*indiff cond : 1*GAIN' \
+-gltLabel 2 'GAIN_range'  -gltCode  2 'group : 1*range cond : 1*GAIN' \
+-gltLabel 3 'LOSS_indiff' -gltCode 3 'group : 1*indiff cond : 1*LOSS' \
+-gltLabel 4 'LOSS_range'  -gltCode 4 'group : 1*range cond : 1*LOSS' \
+-gltLabel 5 'LOSS_range-indiff' -gltCode 5 'group : 1*range -1*indiff cond : 1*LOSS' \
+-dataTable 
+Subj  cond  group InputFile \
+001 GAIN  indifference  /home/jlefortb/narps_open_pipelines/data/results/team_6VV2_afni/firstlevel/sub-001.results.block/sub-001_GAIN.nii \
+001 LOSS  indifference  /home/jlefortb/narps_open_pipelines/data/results/team_6VV2_afni/firstlevel/sub-001.results.block/sub-001_LOSS.nii \
+002 GAIN  range /home/jlefortb/narps_open_pipelines/data/results/team_6VV2_afni/firstlevel/sub-002.results.block/sub-002_GAIN.nii \
+002 LOSS  range /home/jlefortb/narps_open_pipelines/data/results/team_6VV2_afni/firstlevel/sub-002.results.block/sub-002_LOSS.nii \
+003 GAIN  indifference  /home/jlefortb/narps_open_pipelines/data/results/team_6VV2_afni/firstlevel/sub-003.results.block/sub-003_GAIN.nii \
+003 LOSS  indifference  /home/jlefortb/narps_open_pipelines/data/results/team_6VV2_afni/firstlevel/sub-003.results.block/sub-003_LOSS.nii \
+004 GAIN  range /home/jlefortb/narps_open_pipelines/data/results/team_6VV2_afni/firstlevel/sub-004.results.block/sub-004_GAIN.nii \
+004 LOSS  range /home/jlefortb/narps_open_pipelines/data/results/team_6VV2_afni/firstlevel/sub-004.results.block/sub-004_LOSS.nii \
+005 GAIN  indifference  /home/jlefortb/narps_open_pipelines/data/results/team_6VV2_afni/firstlevel/sub-005.results.block/sub-005_GAIN.nii \
+005 LOSS  indifference  /home/jlefortb/narps_open_pipelines/data/results/team_6VV2_afni/firstlevel/sub-005.results.block/sub-005_LOSS.nii \
+006 GAIN  range /home/jlefortb/narps_open_pipelines/data/results/team_6VV2_afni/firstlevel/sub-006.results.block/sub-006_GAIN.nii \
+006 LOSS  range /home/jlefortb/narps_open_pipelines/data/results/team_6VV2_afni/firstlevel/sub-006.results.block/sub-006_LOSS.nii \
+008 GAIN  range /home/jlefortb/narps_open_pipelines/data/results/team_6VV2_afni/firstlevel/sub-008.results.block/sub-008_GAIN.nii \
+008 LOSS  range /home/jlefortb/narps_open_pipelines/data/results/team_6VV2_afni/firstlevel/sub-008.results.block/sub-008_LOSS.nii \
+009 GAIN  indifference  /home/jlefortb/narps_open_pipelines/data/results/team_6VV2_afni/firstlevel/sub-009.results.block/sub-009_GAIN.nii \
+009 LOSS  indifference  /home/jlefortb/narps_open_pipelines/data/results/team_6VV2_afni/firstlevel/sub-009.results.block/sub-009_LOSS.nii \
+010 GAIN  range /home/jlefortb/narps_open_pipelines/data/results/team_6VV2_afni/firstlevel/sub-010.results.block/sub-010_GAIN.nii \
+010 LOSS  range /home/jlefortb/narps_open_pipelines/data/results/team_6VV2_afni/firstlevel/sub-010.results.block/sub-010_LOSS.nii \
+011 GAIN  indifference  /home/jlefortb/narps_open_pipelines/data/results/team_6VV2_afni/firstlevel/sub-011.results.block/sub-011_GAIN.nii \
+011 LOSS  indifference  /home/jlefortb/narps_open_pipelines/data/results/team_6VV2_afni/firstlevel/sub-011.results.block/sub-011_LOSS.nii \
+013 GAIN  indifference  /home/jlefortb/narps_open_pipelines/data/results/team_6VV2_afni/firstlevel/sub-013.results.block/sub-013_GAIN.nii \
+013 LOSS  indifference  /home/jlefortb/narps_open_pipelines/data/results/team_6VV2_afni/firstlevel/sub-013.results.block/sub-013_LOSS.nii \
+014 GAIN  range /home/jlefortb/narps_open_pipelines/data/results/team_6VV2_afni/firstlevel/sub-014.results.block/sub-014_GAIN.nii \
+014 LOSS  range /home/jlefortb/narps_open_pipelines/data/results/team_6VV2_afni/firstlevel/sub-014.results.block/sub-014_LOSS.nii \
+015 GAIN  indifference  /home/jlefortb/narps_open_pipelines/data/results/team_6VV2_afni/firstlevel/sub-015.results.block/sub-015_GAIN.nii \
+015 LOSS  indifference  /home/jlefortb/narps_open_pipelines/data/results/team_6VV2_afni/firstlevel/sub-015.results.block/sub-015_LOSS.nii \
+017 GAIN  indifference  /home/jlefortb/narps_open_pipelines/data/results/team_6VV2_afni/firstlevel/sub-017.results.block/sub-017_GAIN.nii \
+017 LOSS  indifference  /home/jlefortb/narps_open_pipelines/data/results/team_6VV2_afni/firstlevel/sub-017.results.block/sub-017_LOSS.nii \
+019 GAIN  indifference  /home/jlefortb/narps_open_pipelines/data/results/team_6VV2_afni/firstlevel/sub-019.results.block/sub-019_GAIN.nii \
+019 LOSS  indifference  /home/jlefortb/narps_open_pipelines/data/results/team_6VV2_afni/firstlevel/sub-019.results.block/sub-019_LOSS.nii \
+020 GAIN  range /home/jlefortb/narps_open_pipelines/data/results/team_6VV2_afni/firstlevel/sub-020.results.block/sub-020_GAIN.nii \
+020 LOSS  range /home/jlefortb/narps_open_pipelines/data/results/team_6VV2_afni/firstlevel/sub-020.results.block/sub-020_LOSS.nii \
+021 GAIN  indifference  /home/jlefortb/narps_open_pipelines/data/results/team_6VV2_afni/firstlevel/sub-021.results.block/sub-021_GAIN.nii \
+021 LOSS  indifference  /home/jlefortb/narps_open_pipelines/data/results/team_6VV2_afni/firstlevel/sub-021.results.block/sub-021_LOSS.nii \
+022 GAIN  range /home/jlefortb/narps_open_pipelines/data/results/team_6VV2_afni/firstlevel/sub-022.results.block/sub-022_GAIN.nii \
+022 LOSS  range /home/jlefortb/narps_open_pipelines/data/results/team_6VV2_afni/firstlevel/sub-022.results.block/sub-022_LOSS.nii \
+024 GAIN  range /home/jlefortb/narps_open_pipelines/data/results/team_6VV2_afni/firstlevel/sub-024.results.block/sub-024_GAIN.nii \
+024 LOSS  range /home/jlefortb/narps_open_pipelines/data/results/team_6VV2_afni/firstlevel/sub-024.results.block/sub-024_LOSS.nii \
+025 GAIN  indifference  /home/jlefortb/narps_open_pipelines/data/results/team_6VV2_afni/firstlevel/sub-025.results.block/sub-025_GAIN.nii \
+025 LOSS  indifference  /home/jlefortb/narps_open_pipelines/data/results/team_6VV2_afni/firstlevel/sub-025.results.block/sub-025_LOSS.nii \
+026 GAIN  range /home/jlefortb/narps_open_pipelines/data/results/team_6VV2_afni/firstlevel/sub-026.results.block/sub-026_GAIN.nii \
+026 LOSS  range /home/jlefortb/narps_open_pipelines/data/results/team_6VV2_afni/firstlevel/sub-026.results.block/sub-026_LOSS.nii \
+027 GAIN  indifference  /home/jlefortb/narps_open_pipelines/data/results/team_6VV2_afni/firstlevel/sub-027.results.block/sub-027_GAIN.nii \
+027 LOSS  indifference  /home/jlefortb/narps_open_pipelines/data/results/team_6VV2_afni/firstlevel/sub-027.results.block/sub-027_LOSS.nii \
+029 GAIN  indifference  /home/jlefortb/narps_open_pipelines/data/results/team_6VV2_afni/firstlevel/sub-029.results.block/sub-029_GAIN.nii \
+029 LOSS  indifference  /home/jlefortb/narps_open_pipelines/data/results/team_6VV2_afni/firstlevel/sub-029.results.block/sub-029_LOSS.nii \
+032 GAIN  range /home/jlefortb/narps_open_pipelines/data/results/team_6VV2_afni/firstlevel/sub-032.results.block/sub-032_GAIN.nii \
+032 LOSS  range /home/jlefortb/narps_open_pipelines/data/results/team_6VV2_afni/firstlevel/sub-032.results.block/sub-032_LOSS.nii \
+033 GAIN  indifference  /home/jlefortb/narps_open_pipelines/data/results/team_6VV2_afni/firstlevel/sub-033.results.block/sub-033_GAIN.nii \
+033 LOSS  indifference  /home/jlefortb/narps_open_pipelines/data/results/team_6VV2_afni/firstlevel/sub-033.results.block/sub-033_LOSS.nii \
+035 GAIN  indifference  /home/jlefortb/narps_open_pipelines/data/results/team_6VV2_afni/firstlevel/sub-035.results.block/sub-035_GAIN.nii \
+035 LOSS  indifference  /home/jlefortb/narps_open_pipelines/data/results/team_6VV2_afni/firstlevel/sub-035.results.block/sub-035_LOSS.nii \
+036 GAIN  range /home/jlefortb/narps_open_pipelines/data/results/team_6VV2_afni/firstlevel/sub-036.results.block/sub-036_GAIN.nii \
+036 LOSS  range /home/jlefortb/narps_open_pipelines/data/results/team_6VV2_afni/firstlevel/sub-036.results.block/sub-036_LOSS.nii \
+037 GAIN  indifference  /home/jlefortb/narps_open_pipelines/data/results/team_6VV2_afni/firstlevel/sub-037.results.block/sub-037_GAIN.nii \
+037 LOSS  indifference  /home/jlefortb/narps_open_pipelines/data/results/team_6VV2_afni/firstlevel/sub-037.results.block/sub-037_LOSS.nii \
+038 GAIN  range /home/jlefortb/narps_open_pipelines/data/results/team_6VV2_afni/firstlevel/sub-038.results.block/sub-038_GAIN.nii \
+038 LOSS  range /home/jlefortb/narps_open_pipelines/data/results/team_6VV2_afni/firstlevel/sub-038.results.block/sub-038_LOSS.nii \
+039 GAIN  indifference  /home/jlefortb/narps_open_pipelines/data/results/team_6VV2_afni/firstlevel/sub-039.results.block/sub-039_GAIN.nii \
+039 LOSS  indifference  /home/jlefortb/narps_open_pipelines/data/results/team_6VV2_afni/firstlevel/sub-039.results.block/sub-039_LOSS.nii \
+040 GAIN  range /home/jlefortb/narps_open_pipelines/data/results/team_6VV2_afni/firstlevel/sub-040.results.block/sub-040_GAIN.nii \
+040 LOSS  range /home/jlefortb/narps_open_pipelines/data/results/team_6VV2_afni/firstlevel/sub-040.results.block/sub-040_LOSS.nii \
+041 GAIN  indifference  /home/jlefortb/narps_open_pipelines/data/results/team_6VV2_afni/firstlevel/sub-041.results.block/sub-041_GAIN.nii \
+041 LOSS  indifference  /home/jlefortb/narps_open_pipelines/data/results/team_6VV2_afni/firstlevel/sub-041.results.block/sub-041_LOSS.nii \
+043 GAIN  indifference  /home/jlefortb/narps_open_pipelines/data/results/team_6VV2_afni/firstlevel/sub-043.results.block/sub-043_GAIN.nii \
+043 LOSS  indifference  /home/jlefortb/narps_open_pipelines/data/results/team_6VV2_afni/firstlevel/sub-043.results.block/sub-043_LOSS.nii \
+044 GAIN  range /home/jlefortb/narps_open_pipelines/data/results/team_6VV2_afni/firstlevel/sub-044.results.block/sub-044_GAIN.nii \
+044 LOSS  range /home/jlefortb/narps_open_pipelines/data/results/team_6VV2_afni/firstlevel/sub-044.results.block/sub-044_LOSS.nii \
+045 GAIN  indifference  /home/jlefortb/narps_open_pipelines/data/results/team_6VV2_afni/firstlevel/sub-045.results.block/sub-045_GAIN.nii \
+045 LOSS  indifference  /home/jlefortb/narps_open_pipelines/data/results/team_6VV2_afni/firstlevel/sub-045.results.block/sub-045_LOSS.nii \
+046 GAIN  range /home/jlefortb/narps_open_pipelines/data/results/team_6VV2_afni/firstlevel/sub-046.results.block/sub-046_GAIN.nii \
+046 LOSS  range /home/jlefortb/narps_open_pipelines/data/results/team_6VV2_afni/firstlevel/sub-046.results.block/sub-046_LOSS.nii \
+047 GAIN  indifference  /home/jlefortb/narps_open_pipelines/data/results/team_6VV2_afni/firstlevel/sub-047.results.block/sub-047_GAIN.nii \
+047 LOSS  indifference  /home/jlefortb/narps_open_pipelines/data/results/team_6VV2_afni/firstlevel/sub-047.results.block/sub-047_LOSS.nii \
+049 GAIN  indifference  /home/jlefortb/narps_open_pipelines/data/results/team_6VV2_afni/firstlevel/sub-049.results.block/sub-049_GAIN.nii \
+049 LOSS  indifference  /home/jlefortb/narps_open_pipelines/data/results/team_6VV2_afni/firstlevel/sub-049.results.block/sub-049_LOSS.nii \
+050 GAIN  range /home/jlefortb/narps_open_pipelines/data/results/team_6VV2_afni/firstlevel/sub-050.results.block/sub-050_GAIN.nii \
+050 LOSS  range /home/jlefortb/narps_open_pipelines/data/results/team_6VV2_afni/firstlevel/sub-050.results.block/sub-050_LOSS.nii \
+051 GAIN  indifference  /home/jlefortb/narps_open_pipelines/data/results/team_6VV2_afni/firstlevel/sub-051.results.block/sub-051_GAIN.nii \
+051 LOSS  indifference  /home/jlefortb/narps_open_pipelines/data/results/team_6VV2_afni/firstlevel/sub-051.results.block/sub-051_LOSS.nii \
+052 GAIN  range /home/jlefortb/narps_open_pipelines/data/results/team_6VV2_afni/firstlevel/sub-052.results.block/sub-052_GAIN.nii \
+052 LOSS  range /home/jlefortb/narps_open_pipelines/data/results/team_6VV2_afni/firstlevel/sub-052.results.block/sub-052_LOSS.nii \
+053 GAIN  indifference  /home/jlefortb/narps_open_pipelines/data/results/team_6VV2_afni/firstlevel/sub-053.results.block/sub-053_GAIN.nii \
+053 LOSS  indifference  /home/jlefortb/narps_open_pipelines/data/results/team_6VV2_afni/firstlevel/sub-053.results.block/sub-053_LOSS.nii \
+054 GAIN  range /home/jlefortb/narps_open_pipelines/data/results/team_6VV2_afni/firstlevel/sub-054.results.block/sub-054_GAIN.nii \
+054 LOSS  range /home/jlefortb/narps_open_pipelines/data/results/team_6VV2_afni/firstlevel/sub-054.results.block/sub-054_LOSS.nii \
+055 GAIN  indifference  /home/jlefortb/narps_open_pipelines/data/results/team_6VV2_afni/firstlevel/sub-055.results.block/sub-055_GAIN.nii \
+055 LOSS  indifference  /home/jlefortb/narps_open_pipelines/data/results/team_6VV2_afni/firstlevel/sub-055.results.block/sub-055_LOSS.nii \
+056 GAIN  range /home/jlefortb/narps_open_pipelines/data/results/team_6VV2_afni/firstlevel/sub-056.results.block/sub-056_GAIN.nii \
+056 LOSS  range /home/jlefortb/narps_open_pipelines/data/results/team_6VV2_afni/firstlevel/sub-056.results.block/sub-056_LOSS.nii \
+057 GAIN  indifference  /home/jlefortb/narps_open_pipelines/data/results/team_6VV2_afni/firstlevel/sub-057.results.block/sub-057_GAIN.nii \
+057 LOSS  indifference  /home/jlefortb/narps_open_pipelines/data/results/team_6VV2_afni/firstlevel/sub-057.results.block/sub-057_LOSS.nii \
+058 GAIN  range /home/jlefortb/narps_open_pipelines/data/results/team_6VV2_afni/firstlevel/sub-058.results.block/sub-058_GAIN.nii \
+058 LOSS  range /home/jlefortb/narps_open_pipelines/data/results/team_6VV2_afni/firstlevel/sub-058.results.block/sub-058_LOSS.nii \
+059 GAIN  indifference  /home/jlefortb/narps_open_pipelines/data/results/team_6VV2_afni/firstlevel/sub-059.results.block/sub-059_GAIN.nii \
+059 LOSS  indifference  /home/jlefortb/narps_open_pipelines/data/results/team_6VV2_afni/firstlevel/sub-059.results.block/sub-059_LOSS.nii \
+060 GAIN  range /home/jlefortb/narps_open_pipelines/data/results/team_6VV2_afni/firstlevel/sub-060.results.block/sub-060_GAIN.nii \
+060 LOSS  range /home/jlefortb/narps_open_pipelines/data/results/team_6VV2_afni/firstlevel/sub-060.results.block/sub-060_LOSS.nii \
+061 GAIN  indifference  /home/jlefortb/narps_open_pipelines/data/results/team_6VV2_afni/firstlevel/sub-061.results.block/sub-061_GAIN.nii \
+061 LOSS  indifference  /home/jlefortb/narps_open_pipelines/data/results/team_6VV2_afni/firstlevel/sub-061.results.block/sub-061_LOSS.nii \
+062 GAIN  range /home/jlefortb/narps_open_pipelines/data/results/team_6VV2_afni/firstlevel/sub-062.results.block/sub-062_GAIN.nii \
+062 LOSS  range /home/jlefortb/narps_open_pipelines/data/results/team_6VV2_afni/firstlevel/sub-062.results.block/sub-062_LOSS.nii \
+063 GAIN  indifference  /home/jlefortb/narps_open_pipelines/data/results/team_6VV2_afni/firstlevel/sub-063.results.block/sub-063_GAIN.nii \
+063 LOSS  indifference  /home/jlefortb/narps_open_pipelines/data/results/team_6VV2_afni/firstlevel/sub-063.results.block/sub-063_LOSS.nii \
+064 GAIN  range /home/jlefortb/narps_open_pipelines/data/results/team_6VV2_afni/firstlevel/sub-064.results.block/sub-064_GAIN.nii \
+064 LOSS  range /home/jlefortb/narps_open_pipelines/data/results/team_6VV2_afni/firstlevel/sub-064.results.block/sub-064_LOSS.nii \
+066 GAIN  range /home/jlefortb/narps_open_pipelines/data/results/team_6VV2_afni/firstlevel/sub-066.results.block/sub-066_GAIN.nii \
+066 LOSS  range /home/jlefortb/narps_open_pipelines/data/results/team_6VV2_afni/firstlevel/sub-066.results.block/sub-066_LOSS.nii \
+067 GAIN  indifference  /home/jlefortb/narps_open_pipelines/data/results/team_6VV2_afni/firstlevel/sub-067.results.block/sub-067_GAIN.nii \
+067 LOSS  indifference  /home/jlefortb/narps_open_pipelines/data/results/team_6VV2_afni/firstlevel/sub-067.results.block/sub-067_LOSS.nii \
+068 GAIN  range /home/jlefortb/narps_open_pipelines/data/results/team_6VV2_afni/firstlevel/sub-068.results.block/sub-068_GAIN.nii \
+068 LOSS  range /home/jlefortb/narps_open_pipelines/data/results/team_6VV2_afni/firstlevel/sub-068.results.block/sub-068_LOSS.nii \
+069 GAIN  indifference  /home/jlefortb/narps_open_pipelines/data/results/team_6VV2_afni/firstlevel/sub-069.results.block/sub-069_GAIN.nii \
+069 LOSS  indifference  /home/jlefortb/narps_open_pipelines/data/results/team_6VV2_afni/firstlevel/sub-069.results.block/sub-069_LOSS.nii \
+070 GAIN  range /home/jlefortb/narps_open_pipelines/data/results/team_6VV2_afni/firstlevel/sub-070.results.block/sub-070_GAIN.nii \
+070 LOSS  range /home/jlefortb/narps_open_pipelines/data/results/team_6VV2_afni/firstlevel/sub-070.results.block/sub-070_LOSS.nii \
+071 GAIN  indifference  /home/jlefortb/narps_open_pipelines/data/results/team_6VV2_afni/firstlevel/sub-071.results.block/sub-071_GAIN.nii \
+071 LOSS  indifference  /home/jlefortb/narps_open_pipelines/data/results/team_6VV2_afni/firstlevel/sub-071.results.block/sub-071_LOSS.nii \
+072 GAIN  range /home/jlefortb/narps_open_pipelines/data/results/team_6VV2_afni/firstlevel/sub-072.results.block/sub-072_GAIN.nii \
+072 LOSS  range /home/jlefortb/narps_open_pipelines/data/results/team_6VV2_afni/firstlevel/sub-072.results.block/sub-072_LOSS.nii \
+073 GAIN  indifference  /home/jlefortb/narps_open_pipelines/data/results/team_6VV2_afni/firstlevel/sub-073.results.block/sub-073_GAIN.nii \
+073 LOSS  indifference  /home/jlefortb/narps_open_pipelines/data/results/team_6VV2_afni/firstlevel/sub-073.results.block/sub-073_LOSS.nii \
+074 GAIN  range /home/jlefortb/narps_open_pipelines/data/results/team_6VV2_afni/firstlevel/sub-074.results.block/sub-074_GAIN.nii \
+074 LOSS  range /home/jlefortb/narps_open_pipelines/data/results/team_6VV2_afni/firstlevel/sub-074.results.block/sub-074_LOSS.nii \
+075 GAIN  indifference  /home/jlefortb/narps_open_pipelines/data/results/team_6VV2_afni/firstlevel/sub-075.results.block/sub-075_GAIN.nii \
+075 LOSS  indifference  /home/jlefortb/narps_open_pipelines/data/results/team_6VV2_afni/firstlevel/sub-075.results.block/sub-075_LOSS.nii \
+076 GAIN  range /home/jlefortb/narps_open_pipelines/data/results/team_6VV2_afni/firstlevel/sub-076.results.block/sub-076_GAIN.nii \
+076 LOSS  range /home/jlefortb/narps_open_pipelines/data/results/team_6VV2_afni/firstlevel/sub-076.results.block/sub-076_LOSS.nii \
+077 GAIN  indifference  /home/jlefortb/narps_open_pipelines/data/results/team_6VV2_afni/firstlevel/sub-077.results.block/sub-077_GAIN.nii \
+077 LOSS  indifference  /home/jlefortb/narps_open_pipelines/data/results/team_6VV2_afni/firstlevel/sub-077.results.block/sub-077_LOSS.nii \
+079 GAIN  indifference  /home/jlefortb/narps_open_pipelines/data/results/team_6VV2_afni/firstlevel/sub-079.results.block/sub-079_GAIN.nii \
+079 LOSS  indifference  /home/jlefortb/narps_open_pipelines/data/results/team_6VV2_afni/firstlevel/sub-079.results.block/sub-079_LOSS.nii \
+080 GAIN  range /home/jlefortb/narps_open_pipelines/data/results/team_6VV2_afni/firstlevel/sub-080.results.block/sub-080_GAIN.nii \
+080 LOSS  range /home/jlefortb/narps_open_pipelines/data/results/team_6VV2_afni/firstlevel/sub-080.results.block/sub-080_LOSS.nii \
+081 GAIN  indifference  /home/jlefortb/narps_open_pipelines/data/results/team_6VV2_afni/firstlevel/sub-081.results.block/sub-081_GAIN.nii \
+081 LOSS  indifference  /home/jlefortb/narps_open_pipelines/data/results/team_6VV2_afni/firstlevel/sub-081.results.block/sub-081_LOSS.nii \
+082 GAIN  range /home/jlefortb/narps_open_pipelines/data/results/team_6VV2_afni/firstlevel/sub-082.results.block/sub-082_GAIN.nii \
+082 LOSS  range /home/jlefortb/narps_open_pipelines/data/results/team_6VV2_afni/firstlevel/sub-082.results.block/sub-082_LOSS.nii \
+083 GAIN  indifference  /home/jlefortb/narps_open_pipelines/data/results/team_6VV2_afni/firstlevel/sub-083.results.block/sub-083_GAIN.nii \
+083 LOSS  indifference  /home/jlefortb/narps_open_pipelines/data/results/team_6VV2_afni/firstlevel/sub-083.results.block/sub-083_LOSS.nii \
+084 GAIN  range /home/jlefortb/narps_open_pipelines/data/results/team_6VV2_afni/firstlevel/sub-084.results.block/sub-084_GAIN.nii \
+084 LOSS  range /home/jlefortb/narps_open_pipelines/data/results/team_6VV2_afni/firstlevel/sub-084.results.block/sub-084_LOSS.nii \
+085 GAIN  indifference  /home/jlefortb/narps_open_pipelines/data/results/team_6VV2_afni/firstlevel/sub-085.results.block/sub-085_GAIN.nii \
+085 LOSS  indifference  /home/jlefortb/narps_open_pipelines/data/results/team_6VV2_afni/firstlevel/sub-085.results.block/sub-085_LOSS.nii \
+087 GAIN  indifference  /home/jlefortb/narps_open_pipelines/data/results/team_6VV2_afni/firstlevel/sub-087.results.block/sub-087_GAIN.nii \
+087 LOSS  indifference  /home/jlefortb/narps_open_pipelines/data/results/team_6VV2_afni/firstlevel/sub-087.results.block/sub-087_LOSS.nii \
+090 GAIN  range /home/jlefortb/narps_open_pipelines/data/results/team_6VV2_afni/firstlevel/sub-090.results.block/sub-090_GAIN.nii \
+090 LOSS  range /home/jlefortb/narps_open_pipelines/data/results/team_6VV2_afni/firstlevel/sub-090.results.block/sub-090_LOSS.nii \
+092 GAIN  range /home/jlefortb/narps_open_pipelines/data/results/team_6VV2_afni/firstlevel/sub-092.results.block/sub-092_GAIN.nii \
+092 LOSS  range /home/jlefortb/narps_open_pipelines/data/results/team_6VV2_afni/firstlevel/sub-092.results.block/sub-092_LOSS.nii \
+093 GAIN  indifference  /home/jlefortb/narps_open_pipelines/data/results/team_6VV2_afni/firstlevel/sub-093.results.block/sub-093_GAIN.nii \
+093 LOSS  indifference  /home/jlefortb/narps_open_pipelines/data/results/team_6VV2_afni/firstlevel/sub-093.results.block/sub-093_LOSS.nii \
+094 GAIN  range /home/jlefortb/narps_open_pipelines/data/results/team_6VV2_afni/firstlevel/sub-094.results.block/sub-094_GAIN.nii \
+094 LOSS  range /home/jlefortb/narps_open_pipelines/data/results/team_6VV2_afni/firstlevel/sub-094.results.block/sub-094_LOSS.nii \
+095 GAIN  indifference  /home/jlefortb/narps_open_pipelines/data/results/team_6VV2_afni/firstlevel/sub-095.results.block/sub-095_GAIN.nii \
+095 LOSS  indifference  /home/jlefortb/narps_open_pipelines/data/results/team_6VV2_afni/firstlevel/sub-095.results.block/sub-095_LOSS.nii \
+096 GAIN  range /home/jlefortb/narps_open_pipelines/data/results/team_6VV2_afni/firstlevel/sub-096.results.block/sub-096_GAIN.nii \
+096 LOSS  range /home/jlefortb/narps_open_pipelines/data/results/team_6VV2_afni/firstlevel/sub-096.results.block/sub-096_LOSS.nii \
+098 GAIN  range /home/jlefortb/narps_open_pipelines/data/results/team_6VV2_afni/firstlevel/sub-098.results.block/sub-098_GAIN.nii \
+098 LOSS  range /home/jlefortb/narps_open_pipelines/data/results/team_6VV2_afni/firstlevel/sub-098.results.block/sub-098_LOSS.nii \
+099 GAIN  indifference  /home/jlefortb/narps_open_pipelines/data/results/team_6VV2_afni/firstlevel/sub-099.results.block/sub-099_GAIN.nii \
+099 LOSS  indifference  /home/jlefortb/narps_open_pipelines/data/results/team_6VV2_afni/firstlevel/sub-099.results.block/sub-099_LOSS.nii \
+102 GAIN  range /home/jlefortb/narps_open_pipelines/data/results/team_6VV2_afni/firstlevel/sub-102.results.block/sub-102_GAIN.nii \
+102 LOSS  range /home/jlefortb/narps_open_pipelines/data/results/team_6VV2_afni/firstlevel/sub-102.results.block/sub-102_LOSS.nii \
+103 GAIN  indifference  /home/jlefortb/narps_open_pipelines/data/results/team_6VV2_afni/firstlevel/sub-103.results.block/sub-103_GAIN.nii \
+103 LOSS  indifference  /home/jlefortb/narps_open_pipelines/data/results/team_6VV2_afni/firstlevel/sub-103.results.block/sub-103_LOSS.nii \
+104 GAIN  range /home/jlefortb/narps_open_pipelines/data/results/team_6VV2_afni/firstlevel/sub-104.results.block/sub-104_GAIN.nii \
+104 LOSS  range /home/jlefortb/narps_open_pipelines/data/results/team_6VV2_afni/firstlevel/sub-104.results.block/sub-104_LOSS.nii \
+105 GAIN  indifference  /home/jlefortb/narps_open_pipelines/data/results/team_6VV2_afni/firstlevel/sub-105.results.block/sub-105_GAIN.nii \
+105 LOSS  indifference  /home/jlefortb/narps_open_pipelines/data/results/team_6VV2_afni/firstlevel/sub-105.results.block/sub-105_LOSS.nii \
+106 GAIN  range /home/jlefortb/narps_open_pipelines/data/results/team_6VV2_afni/firstlevel/sub-106.results.block/sub-106_GAIN.nii \
+106 LOSS  range /home/jlefortb/narps_open_pipelines/data/results/team_6VV2_afni/firstlevel/sub-106.results.block/sub-106_LOSS.nii \
+107 GAIN  indifference  /home/jlefortb/narps_open_pipelines/data/results/team_6VV2_afni/firstlevel/sub-107.results.block/sub-107_GAIN.nii \
+107 LOSS  indifference  /home/jlefortb/narps_open_pipelines/data/results/team_6VV2_afni/firstlevel/sub-107.results.block/sub-107_LOSS.nii \
+108 GAIN  range /home/jlefortb/narps_open_pipelines/data/results/team_6VV2_afni/firstlevel/sub-108.results.block/sub-108_GAIN.nii \
+108 LOSS  range /home/jlefortb/narps_open_pipelines/data/results/team_6VV2_afni/firstlevel/sub-108.results.block/sub-108_LOSS.nii \
+109 GAIN  indifference  /home/jlefortb/narps_open_pipelines/data/results/team_6VV2_afni/firstlevel/sub-109.results.block/sub-109_GAIN.nii \
+109 LOSS  indifference  /home/jlefortb/narps_open_pipelines/data/results/team_6VV2_afni/firstlevel/sub-109.results.block/sub-109_LOSS.nii \
+110 GAIN  range /home/jlefortb/narps_open_pipelines/data/results/team_6VV2_afni/firstlevel/sub-110.results.block/sub-110_GAIN.nii \
+110 LOSS  range /home/jlefortb/narps_open_pipelines/data/results/team_6VV2_afni/firstlevel/sub-110.results.block/sub-110_LOSS.nii \
+112 GAIN  range /home/jlefortb/narps_open_pipelines/data/results/team_6VV2_afni/firstlevel/sub-112.results.block/sub-112_GAIN.nii \
+112 LOSS  range /home/jlefortb/narps_open_pipelines/data/results/team_6VV2_afni/firstlevel/sub-112.results.block/sub-112_LOSS.nii \
+113 GAIN  indifference  /home/jlefortb/narps_open_pipelines/data/results/team_6VV2_afni/firstlevel/sub-113.results.block/sub-113_GAIN.nii \
+113 LOSS  indifference  /home/jlefortb/narps_open_pipelines/data/results/team_6VV2_afni/firstlevel/sub-113.results.block/sub-113_LOSS.nii \
+114 GAIN  range /home/jlefortb/narps_open_pipelines/data/results/team_6VV2_afni/firstlevel/sub-114.results.block/sub-114_GAIN.nii \
+114 LOSS  range /home/jlefortb/narps_open_pipelines/data/results/team_6VV2_afni/firstlevel/sub-114.results.block/sub-114_LOSS.nii \
+115 GAIN  indifference  /home/jlefortb/narps_open_pipelines/data/results/team_6VV2_afni/firstlevel/sub-115.results.block/sub-115_GAIN.nii \
+115 LOSS  indifference  /home/jlefortb/narps_open_pipelines/data/results/team_6VV2_afni/firstlevel/sub-115.results.block/sub-115_LOSS.nii \
+116 GAIN  range /home/jlefortb/narps_open_pipelines/data/results/team_6VV2_afni/firstlevel/sub-116.results.block/sub-116_GAIN.nii \
+116 LOSS  range /home/jlefortb/narps_open_pipelines/data/results/team_6VV2_afni/firstlevel/sub-116.results.block/sub-116_LOSS.nii \
+117 GAIN  indifference  /home/jlefortb/narps_open_pipelines/data/results/team_6VV2_afni/firstlevel/sub-117.results.block/sub-117_GAIN.nii \
+117 LOSS  indifference  /home/jlefortb/narps_open_pipelines/data/results/team_6VV2_afni/firstlevel/sub-117.results.block/sub-117_LOSS.nii \
+118 GAIN  range /home/jlefortb/narps_open_pipelines/data/results/team_6VV2_afni/firstlevel/sub-118.results.block/sub-118_GAIN.nii \
+118 LOSS  range /home/jlefortb/narps_open_pipelines/data/results/team_6VV2_afni/firstlevel/sub-118.results.block/sub-118_LOSS.nii \
+119 GAIN  indifference  /home/jlefortb/narps_open_pipelines/data/results/team_6VV2_afni/firstlevel/sub-119.results.block/sub-119_GAIN.nii \
+119 LOSS  indifference  /home/jlefortb/narps_open_pipelines/data/results/team_6VV2_afni/firstlevel/sub-119.results.block/sub-119_LOSS.nii \
+120 GAIN  range /home/jlefortb/narps_open_pipelines/data/results/team_6VV2_afni/firstlevel/sub-120.results.block/sub-120_GAIN.nii \
+120 LOSS  range /home/jlefortb/narps_open_pipelines/data/results/team_6VV2_afni/firstlevel/sub-120.results.block/sub-120_LOSS.nii \
+121 GAIN  indifference  /home/jlefortb/narps_open_pipelines/data/results/team_6VV2_afni/firstlevel/sub-121.results.block/sub-121_GAIN.nii \
+121 LOSS  indifference  /home/jlefortb/narps_open_pipelines/data/results/team_6VV2_afni/firstlevel/sub-121.results.block/sub-121_LOSS.nii \
+123 GAIN  indifference  /home/jlefortb/narps_open_pipelines/data/results/team_6VV2_afni/firstlevel/sub-123.results.block/sub-123_GAIN.nii \
+123 LOSS  indifference  /home/jlefortb/narps_open_pipelines/data/results/team_6VV2_afni/firstlevel/sub-123.results.block/sub-123_LOSS.nii \
+124 GAIN  range /home/jlefortb/narps_open_pipelines/data/results/team_6VV2_afni/firstlevel/sub-124.results.block/sub-124_GAIN.nii \
+124 LOSS  range /home/jlefortb/narps_open_pipelines/data/results/team_6VV2_afni/firstlevel/sub-124.results.block/sub-124_LOSS.nii
+
+
+

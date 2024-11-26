@@ -1,0 +1,2722 @@
+{
+    "groups": [
+        {
+            "name": "Group_00001",
+            "procs": [
+                0,
+                1,
+                2,
+                3,
+                4,
+                5,
+                6,
+                7,
+                8,
+                9,
+                10,
+                11,
+                12,
+                13,
+                14,
+                15,
+                16,
+                17,
+                18,
+                19,
+                20,
+                21,
+                22,
+                23,
+                24,
+                25,
+                26,
+                27,
+                28,
+                29,
+                30,
+                31,
+                32,
+                33,
+                34,
+                35,
+                36,
+                37,
+                38,
+                39,
+                40,
+                41,
+                42,
+                43,
+                44,
+                45,
+                46,
+                47,
+                48,
+                49,
+                50,
+                51,
+                52,
+                53,
+                54,
+                55,
+                56,
+                57,
+                58,
+                59,
+                60,
+                61,
+                62,
+                63,
+                64,
+                65,
+                66,
+                67,
+                68,
+                69,
+                70,
+                71,
+                72,
+                73,
+                74,
+                75,
+                76,
+                77,
+                78,
+                79,
+                80,
+                81,
+                82,
+                83,
+                84,
+                85,
+                86,
+                87,
+                88,
+                89,
+                90,
+                91,
+                92,
+                93,
+                94,
+                95,
+                96,
+                97,
+                98,
+                99,
+                100,
+                101,
+                102,
+                103,
+                104,
+                105,
+                106,
+                107,
+                108
+            ],
+            "total": 109
+        },
+        {
+            "name": "Group_00002",
+            "procs": [
+                109
+            ],
+            "total": 1
+        },
+        {
+            "name": "Group_00003",
+            "procs": [
+                110
+            ],
+            "total": 1
+        },
+        {
+            "name": "Group_00004",
+            "procs": [
+                111
+            ],
+            "total": 1
+        },
+        {
+            "name": "Group_00005",
+            "procs": [
+                112
+            ],
+            "total": 1
+        },
+        {
+            "name": "Group_00006",
+            "procs": [
+                113
+            ],
+            "total": 1
+        },
+        {
+            "name": "Group_00007",
+            "procs": [
+                114
+            ],
+            "total": 1
+        },
+        {
+            "name": "Group_00008",
+            "procs": [
+                115
+            ],
+            "total": 1
+        },
+        {
+            "name": "Group_00009",
+            "procs": [
+                116
+            ],
+            "total": 1
+        },
+        {
+            "name": "Group_00010",
+            "procs": [
+                117
+            ],
+            "total": 1
+        },
+        {
+            "name": "Group_00011",
+            "procs": [
+                118
+            ],
+            "total": 1
+        },
+        {
+            "name": "Group_00012",
+            "procs": [
+                119
+            ],
+            "total": 1
+        },
+        {
+            "name": "Group_00013",
+            "procs": [
+                120
+            ],
+            "total": 1
+        },
+        {
+            "name": "Group_00014",
+            "procs": [
+                121
+            ],
+            "total": 1
+        },
+        {
+            "name": "Group_00015",
+            "procs": [
+                122
+            ],
+            "total": 1
+        },
+        {
+            "name": "Group_00016",
+            "procs": [
+                123
+            ],
+            "total": 1
+        },
+        {
+            "name": "Group_00017",
+            "procs": [
+                124
+            ],
+            "total": 1
+        },
+        {
+            "name": "Group_00018",
+            "procs": [
+                125
+            ],
+            "total": 1
+        },
+        {
+            "name": "Group_00019",
+            "procs": [
+                126
+            ],
+            "total": 1
+        },
+        {
+            "name": "Group_00020",
+            "procs": [
+                127
+            ],
+            "total": 1
+        },
+        {
+            "name": "Group_00021",
+            "procs": [
+                128
+            ],
+            "total": 1
+        },
+        {
+            "name": "Group_00022",
+            "procs": [
+                129
+            ],
+            "total": 1
+        },
+        {
+            "name": "Group_00023",
+            "procs": [
+                130
+            ],
+            "total": 1
+        },
+        {
+            "name": "Group_00024",
+            "procs": [
+                131
+            ],
+            "total": 1
+        },
+        {
+            "name": "Group_00025",
+            "procs": [
+                132
+            ],
+            "total": 1
+        },
+        {
+            "name": "Group_00026",
+            "procs": [
+                133
+            ],
+            "total": 1
+        },
+        {
+            "name": "Group_00027",
+            "procs": [
+                134
+            ],
+            "total": 1
+        },
+        {
+            "name": "Group_00028",
+            "procs": [
+                135
+            ],
+            "total": 1
+        },
+        {
+            "name": "Group_00029",
+            "procs": [
+                136
+            ],
+            "total": 1
+        },
+        {
+            "name": "Group_00030",
+            "procs": [
+                137
+            ],
+            "total": 1
+        },
+        {
+            "name": "Group_00031",
+            "procs": [
+                138
+            ],
+            "total": 1
+        },
+        {
+            "name": "Group_00032",
+            "procs": [
+                139
+            ],
+            "total": 1
+        },
+        {
+            "name": "Group_00033",
+            "procs": [
+                140
+            ],
+            "total": 1
+        },
+        {
+            "name": "Group_00034",
+            "procs": [
+                141
+            ],
+            "total": 1
+        },
+        {
+            "name": "Group_00035",
+            "procs": [
+                142
+            ],
+            "total": 1
+        },
+        {
+            "name": "Group_00036",
+            "procs": [
+                143
+            ],
+            "total": 1
+        },
+        {
+            "name": "Group_00037",
+            "procs": [
+                144
+            ],
+            "total": 1
+        },
+        {
+            "name": "Group_00038",
+            "procs": [
+                145
+            ],
+            "total": 1
+        },
+        {
+            "name": "Group_00039",
+            "procs": [
+                146
+            ],
+            "total": 1
+        },
+        {
+            "name": "Group_00040",
+            "procs": [
+                147
+            ],
+            "total": 1
+        },
+        {
+            "name": "Group_00041",
+            "procs": [
+                148
+            ],
+            "total": 1
+        },
+        {
+            "name": "Group_00042",
+            "procs": [
+                149
+            ],
+            "total": 1
+        },
+        {
+            "name": "Group_00043",
+            "procs": [
+                150
+            ],
+            "total": 1
+        },
+        {
+            "name": "Group_00044",
+            "procs": [
+                151
+            ],
+            "total": 1
+        },
+        {
+            "name": "Group_00045",
+            "procs": [
+                152
+            ],
+            "total": 1
+        },
+        {
+            "name": "Group_00046",
+            "procs": [
+                153
+            ],
+            "total": 1
+        },
+        {
+            "name": "Group_00047",
+            "procs": [
+                154
+            ],
+            "total": 1
+        },
+        {
+            "name": "Group_00048",
+            "procs": [
+                155
+            ],
+            "total": 1
+        },
+        {
+            "name": "Group_00049",
+            "procs": [
+                156
+            ],
+            "total": 1
+        },
+        {
+            "name": "Group_00050",
+            "procs": [
+                157
+            ],
+            "total": 1
+        },
+        {
+            "name": "Group_00051",
+            "procs": [
+                158
+            ],
+            "total": 1
+        },
+        {
+            "name": "Group_00052",
+            "procs": [
+                159
+            ],
+            "total": 1
+        },
+        {
+            "name": "Group_00053",
+            "procs": [
+                160
+            ],
+            "total": 1
+        },
+        {
+            "name": "Group_00054",
+            "procs": [
+                161
+            ],
+            "total": 1
+        },
+        {
+            "name": "Group_00055",
+            "procs": [
+                162
+            ],
+            "total": 1
+        },
+        {
+            "name": "Group_00056",
+            "procs": [
+                163
+            ],
+            "total": 1
+        },
+        {
+            "name": "Group_00057",
+            "procs": [
+                164
+            ],
+            "total": 1
+        },
+        {
+            "name": "Group_00058",
+            "procs": [
+                165
+            ],
+            "total": 1
+        },
+        {
+            "name": "Group_00059",
+            "procs": [
+                166
+            ],
+            "total": 1
+        },
+        {
+            "name": "Group_00060",
+            "procs": [
+                167
+            ],
+            "total": 1
+        },
+        {
+            "name": "Group_00061",
+            "procs": [
+                168
+            ],
+            "total": 1
+        },
+        {
+            "name": "Group_00062",
+            "procs": [
+                169
+            ],
+            "total": 1
+        },
+        {
+            "name": "Group_00063",
+            "procs": [
+                170
+            ],
+            "total": 1
+        },
+        {
+            "name": "Group_00064",
+            "procs": [
+                171
+            ],
+            "total": 1
+        },
+        {
+            "name": "Group_00065",
+            "procs": [
+                172
+            ],
+            "total": 1
+        },
+        {
+            "name": "Group_00066",
+            "procs": [
+                173
+            ],
+            "total": 1
+        },
+        {
+            "name": "Group_00067",
+            "procs": [
+                174
+            ],
+            "total": 1
+        },
+        {
+            "name": "Group_00068",
+            "procs": [
+                175
+            ],
+            "total": 1
+        },
+        {
+            "name": "Group_00069",
+            "procs": [
+                176
+            ],
+            "total": 1
+        },
+        {
+            "name": "Group_00070",
+            "procs": [
+                177
+            ],
+            "total": 1
+        },
+        {
+            "name": "Group_00071",
+            "procs": [
+                178
+            ],
+            "total": 1
+        },
+        {
+            "name": "Group_00072",
+            "procs": [
+                179
+            ],
+            "total": 1
+        },
+        {
+            "name": "Group_00073",
+            "procs": [
+                180
+            ],
+            "total": 1
+        },
+        {
+            "name": "Group_00074",
+            "procs": [
+                181
+            ],
+            "total": 1
+        },
+        {
+            "name": "Group_00075",
+            "procs": [
+                182
+            ],
+            "total": 1
+        },
+        {
+            "name": "Group_00076",
+            "procs": [
+                183
+            ],
+            "total": 1
+        },
+        {
+            "name": "Group_00077",
+            "procs": [
+                184
+            ],
+            "total": 1
+        },
+        {
+            "name": "Group_00078",
+            "procs": [
+                185
+            ],
+            "total": 1
+        },
+        {
+            "name": "Group_00079",
+            "procs": [
+                186
+            ],
+            "total": 1
+        },
+        {
+            "name": "Group_00080",
+            "procs": [
+                187
+            ],
+            "total": 1
+        },
+        {
+            "name": "Group_00081",
+            "procs": [
+                188
+            ],
+            "total": 1
+        },
+        {
+            "name": "Group_00082",
+            "procs": [
+                189
+            ],
+            "total": 1
+        },
+        {
+            "name": "Group_00083",
+            "procs": [
+                190
+            ],
+            "total": 1
+        },
+        {
+            "name": "Group_00084",
+            "procs": [
+                191
+            ],
+            "total": 1
+        },
+        {
+            "name": "Group_00085",
+            "procs": [
+                192
+            ],
+            "total": 1
+        },
+        {
+            "name": "Group_00086",
+            "procs": [
+                193
+            ],
+            "total": 1
+        },
+        {
+            "name": "Group_00087",
+            "procs": [
+                194
+            ],
+            "total": 1
+        },
+        {
+            "name": "Group_00088",
+            "procs": [
+                195
+            ],
+            "total": 1
+        },
+        {
+            "name": "Group_00089",
+            "procs": [
+                196
+            ],
+            "total": 1
+        },
+        {
+            "name": "Group_00090",
+            "procs": [
+                197
+            ],
+            "total": 1
+        },
+        {
+            "name": "Group_00091",
+            "procs": [
+                198
+            ],
+            "total": 1
+        },
+        {
+            "name": "Group_00092",
+            "procs": [
+                199
+            ],
+            "total": 1
+        },
+        {
+            "name": "Group_00093",
+            "procs": [
+                200
+            ],
+            "total": 1
+        },
+        {
+            "name": "Group_00094",
+            "procs": [
+                201
+            ],
+            "total": 1
+        },
+        {
+            "name": "Group_00095",
+            "procs": [
+                202
+            ],
+            "total": 1
+        },
+        {
+            "name": "Group_00096",
+            "procs": [
+                203
+            ],
+            "total": 1
+        },
+        {
+            "name": "Group_00097",
+            "procs": [
+                204
+            ],
+            "total": 1
+        },
+        {
+            "name": "Group_00098",
+            "procs": [
+                205
+            ],
+            "total": 1
+        },
+        {
+            "name": "Group_00099",
+            "procs": [
+                206
+            ],
+            "total": 1
+        },
+        {
+            "name": "Group_00100",
+            "procs": [
+                207
+            ],
+            "total": 1
+        },
+        {
+            "name": "Group_00101",
+            "procs": [
+                208
+            ],
+            "total": 1
+        },
+        {
+            "name": "Group_00102",
+            "procs": [
+                209
+            ],
+            "total": 1
+        },
+        {
+            "name": "Group_00103",
+            "procs": [
+                210
+            ],
+            "total": 1
+        },
+        {
+            "name": "Group_00104",
+            "procs": [
+                211
+            ],
+            "total": 1
+        },
+        {
+            "name": "Group_00105",
+            "procs": [
+                212
+            ],
+            "total": 1
+        },
+        {
+            "name": "Group_00106",
+            "procs": [
+                213
+            ],
+            "total": 1
+        },
+        {
+            "name": "Group_00107",
+            "procs": [
+                214
+            ],
+            "total": 1
+        },
+        {
+            "name": "Group_00108",
+            "procs": [
+                215
+            ],
+            "total": 1
+        },
+        {
+            "name": "Group_00109",
+            "procs": [
+                216
+            ],
+            "total": 1
+        }
+    ],
+    "links": [
+        {
+            "source": 0,
+            "target": 1,
+            "value": 1
+        },
+        {
+            "source": 0,
+            "target": 2,
+            "value": 1
+        },
+        {
+            "source": 0,
+            "target": 3,
+            "value": 1
+        },
+        {
+            "source": 0,
+            "target": 4,
+            "value": 1
+        },
+        {
+            "source": 0,
+            "target": 5,
+            "value": 1
+        },
+        {
+            "source": 0,
+            "target": 6,
+            "value": 1
+        },
+        {
+            "source": 0,
+            "target": 7,
+            "value": 1
+        },
+        {
+            "source": 0,
+            "target": 8,
+            "value": 1
+        },
+        {
+            "source": 0,
+            "target": 9,
+            "value": 1
+        },
+        {
+            "source": 0,
+            "target": 10,
+            "value": 1
+        },
+        {
+            "source": 0,
+            "target": 11,
+            "value": 1
+        },
+        {
+            "source": 0,
+            "target": 12,
+            "value": 1
+        },
+        {
+            "source": 0,
+            "target": 13,
+            "value": 1
+        },
+        {
+            "source": 0,
+            "target": 14,
+            "value": 1
+        },
+        {
+            "source": 0,
+            "target": 15,
+            "value": 1
+        },
+        {
+            "source": 0,
+            "target": 16,
+            "value": 1
+        },
+        {
+            "source": 0,
+            "target": 17,
+            "value": 1
+        },
+        {
+            "source": 0,
+            "target": 18,
+            "value": 1
+        },
+        {
+            "source": 0,
+            "target": 19,
+            "value": 1
+        },
+        {
+            "source": 0,
+            "target": 20,
+            "value": 1
+        },
+        {
+            "source": 0,
+            "target": 21,
+            "value": 1
+        },
+        {
+            "source": 0,
+            "target": 22,
+            "value": 1
+        },
+        {
+            "source": 0,
+            "target": 23,
+            "value": 1
+        },
+        {
+            "source": 0,
+            "target": 24,
+            "value": 1
+        },
+        {
+            "source": 0,
+            "target": 25,
+            "value": 1
+        },
+        {
+            "source": 0,
+            "target": 26,
+            "value": 1
+        },
+        {
+            "source": 0,
+            "target": 27,
+            "value": 1
+        },
+        {
+            "source": 0,
+            "target": 28,
+            "value": 1
+        },
+        {
+            "source": 0,
+            "target": 29,
+            "value": 1
+        },
+        {
+            "source": 0,
+            "target": 30,
+            "value": 1
+        },
+        {
+            "source": 0,
+            "target": 31,
+            "value": 1
+        },
+        {
+            "source": 0,
+            "target": 32,
+            "value": 1
+        },
+        {
+            "source": 0,
+            "target": 33,
+            "value": 1
+        },
+        {
+            "source": 0,
+            "target": 34,
+            "value": 1
+        },
+        {
+            "source": 0,
+            "target": 35,
+            "value": 1
+        },
+        {
+            "source": 0,
+            "target": 36,
+            "value": 1
+        },
+        {
+            "source": 0,
+            "target": 37,
+            "value": 1
+        },
+        {
+            "source": 0,
+            "target": 38,
+            "value": 1
+        },
+        {
+            "source": 0,
+            "target": 39,
+            "value": 1
+        },
+        {
+            "source": 0,
+            "target": 40,
+            "value": 1
+        },
+        {
+            "source": 0,
+            "target": 41,
+            "value": 1
+        },
+        {
+            "source": 0,
+            "target": 42,
+            "value": 1
+        },
+        {
+            "source": 0,
+            "target": 43,
+            "value": 1
+        },
+        {
+            "source": 0,
+            "target": 44,
+            "value": 1
+        },
+        {
+            "source": 0,
+            "target": 45,
+            "value": 1
+        },
+        {
+            "source": 0,
+            "target": 46,
+            "value": 1
+        },
+        {
+            "source": 0,
+            "target": 47,
+            "value": 1
+        },
+        {
+            "source": 0,
+            "target": 48,
+            "value": 1
+        },
+        {
+            "source": 0,
+            "target": 49,
+            "value": 1
+        },
+        {
+            "source": 0,
+            "target": 50,
+            "value": 1
+        },
+        {
+            "source": 0,
+            "target": 51,
+            "value": 1
+        },
+        {
+            "source": 0,
+            "target": 52,
+            "value": 1
+        },
+        {
+            "source": 0,
+            "target": 53,
+            "value": 1
+        },
+        {
+            "source": 0,
+            "target": 54,
+            "value": 1
+        },
+        {
+            "source": 0,
+            "target": 55,
+            "value": 1
+        },
+        {
+            "source": 0,
+            "target": 56,
+            "value": 1
+        },
+        {
+            "source": 0,
+            "target": 57,
+            "value": 1
+        },
+        {
+            "source": 0,
+            "target": 58,
+            "value": 1
+        },
+        {
+            "source": 0,
+            "target": 59,
+            "value": 1
+        },
+        {
+            "source": 0,
+            "target": 60,
+            "value": 1
+        },
+        {
+            "source": 0,
+            "target": 61,
+            "value": 1
+        },
+        {
+            "source": 0,
+            "target": 62,
+            "value": 1
+        },
+        {
+            "source": 0,
+            "target": 63,
+            "value": 1
+        },
+        {
+            "source": 0,
+            "target": 64,
+            "value": 1
+        },
+        {
+            "source": 0,
+            "target": 65,
+            "value": 1
+        },
+        {
+            "source": 0,
+            "target": 66,
+            "value": 1
+        },
+        {
+            "source": 0,
+            "target": 67,
+            "value": 1
+        },
+        {
+            "source": 0,
+            "target": 68,
+            "value": 1
+        },
+        {
+            "source": 0,
+            "target": 69,
+            "value": 1
+        },
+        {
+            "source": 0,
+            "target": 70,
+            "value": 1
+        },
+        {
+            "source": 0,
+            "target": 71,
+            "value": 1
+        },
+        {
+            "source": 0,
+            "target": 72,
+            "value": 1
+        },
+        {
+            "source": 0,
+            "target": 73,
+            "value": 1
+        },
+        {
+            "source": 0,
+            "target": 74,
+            "value": 1
+        },
+        {
+            "source": 0,
+            "target": 75,
+            "value": 1
+        },
+        {
+            "source": 0,
+            "target": 76,
+            "value": 1
+        },
+        {
+            "source": 0,
+            "target": 77,
+            "value": 1
+        },
+        {
+            "source": 0,
+            "target": 78,
+            "value": 1
+        },
+        {
+            "source": 0,
+            "target": 79,
+            "value": 1
+        },
+        {
+            "source": 0,
+            "target": 80,
+            "value": 1
+        },
+        {
+            "source": 0,
+            "target": 81,
+            "value": 1
+        },
+        {
+            "source": 0,
+            "target": 82,
+            "value": 1
+        },
+        {
+            "source": 0,
+            "target": 83,
+            "value": 1
+        },
+        {
+            "source": 0,
+            "target": 84,
+            "value": 1
+        },
+        {
+            "source": 0,
+            "target": 85,
+            "value": 1
+        },
+        {
+            "source": 0,
+            "target": 86,
+            "value": 1
+        },
+        {
+            "source": 0,
+            "target": 87,
+            "value": 1
+        },
+        {
+            "source": 0,
+            "target": 88,
+            "value": 1
+        },
+        {
+            "source": 0,
+            "target": 89,
+            "value": 1
+        },
+        {
+            "source": 0,
+            "target": 90,
+            "value": 1
+        },
+        {
+            "source": 0,
+            "target": 91,
+            "value": 1
+        },
+        {
+            "source": 0,
+            "target": 92,
+            "value": 1
+        },
+        {
+            "source": 0,
+            "target": 93,
+            "value": 1
+        },
+        {
+            "source": 0,
+            "target": 94,
+            "value": 1
+        },
+        {
+            "source": 0,
+            "target": 95,
+            "value": 1
+        },
+        {
+            "source": 0,
+            "target": 96,
+            "value": 1
+        },
+        {
+            "source": 0,
+            "target": 97,
+            "value": 1
+        },
+        {
+            "source": 0,
+            "target": 98,
+            "value": 1
+        },
+        {
+            "source": 0,
+            "target": 99,
+            "value": 1
+        },
+        {
+            "source": 0,
+            "target": 100,
+            "value": 1
+        },
+        {
+            "source": 0,
+            "target": 101,
+            "value": 1
+        },
+        {
+            "source": 0,
+            "target": 102,
+            "value": 1
+        },
+        {
+            "source": 0,
+            "target": 103,
+            "value": 1
+        },
+        {
+            "source": 0,
+            "target": 104,
+            "value": 1
+        },
+        {
+            "source": 0,
+            "target": 105,
+            "value": 1
+        },
+        {
+            "source": 0,
+            "target": 106,
+            "value": 1
+        },
+        {
+            "source": 0,
+            "target": 107,
+            "value": 1
+        },
+        {
+            "source": 0,
+            "target": 108,
+            "value": 1
+        }
+    ],
+    "maxN": 109,
+    "nodes": [
+        {
+            "group": 1,
+            "name": "0_files",
+            "report": "/home/jlefortb/narps_open_pipelines/Afni_proc_through_nipype/files/_report/report.rst",
+            "result": "/home/jlefortb/narps_open_pipelines/Afni_proc_through_nipype/files/result_files.pklz"
+        },
+        {
+            "group": 1,
+            "name": "1_afni_proc",
+            "report": "/home/jlefortb/narps_open_pipelines/Afni_proc_through_nipype/_subject_id_082/afni_proc/_report/report.rst",
+            "result": "/home/jlefortb/narps_open_pipelines/Afni_proc_through_nipype/_subject_id_082/afni_proc/result_afni_proc.pklz"
+        },
+        {
+            "group": 1,
+            "name": "2_afni_proc",
+            "report": "/home/jlefortb/narps_open_pipelines/Afni_proc_through_nipype/_subject_id_013/afni_proc/_report/report.rst",
+            "result": "/home/jlefortb/narps_open_pipelines/Afni_proc_through_nipype/_subject_id_013/afni_proc/result_afni_proc.pklz"
+        },
+        {
+            "group": 1,
+            "name": "3_afni_proc",
+            "report": "/home/jlefortb/narps_open_pipelines/Afni_proc_through_nipype/_subject_id_021/afni_proc/_report/report.rst",
+            "result": "/home/jlefortb/narps_open_pipelines/Afni_proc_through_nipype/_subject_id_021/afni_proc/result_afni_proc.pklz"
+        },
+        {
+            "group": 1,
+            "name": "4_afni_proc",
+            "report": "/home/jlefortb/narps_open_pipelines/Afni_proc_through_nipype/_subject_id_089/afni_proc/_report/report.rst",
+            "result": "/home/jlefortb/narps_open_pipelines/Afni_proc_through_nipype/_subject_id_089/afni_proc/result_afni_proc.pklz"
+        },
+        {
+            "group": 1,
+            "name": "5_afni_proc",
+            "report": "/home/jlefortb/narps_open_pipelines/Afni_proc_through_nipype/_subject_id_004/afni_proc/_report/report.rst",
+            "result": "/home/jlefortb/narps_open_pipelines/Afni_proc_through_nipype/_subject_id_004/afni_proc/result_afni_proc.pklz"
+        },
+        {
+            "group": 1,
+            "name": "6_afni_proc",
+            "report": "/home/jlefortb/narps_open_pipelines/Afni_proc_through_nipype/_subject_id_002/afni_proc/_report/report.rst",
+            "result": "/home/jlefortb/narps_open_pipelines/Afni_proc_through_nipype/_subject_id_002/afni_proc/result_afni_proc.pklz"
+        },
+        {
+            "group": 1,
+            "name": "7_afni_proc",
+            "report": "/home/jlefortb/narps_open_pipelines/Afni_proc_through_nipype/_subject_id_046/afni_proc/_report/report.rst",
+            "result": "/home/jlefortb/narps_open_pipelines/Afni_proc_through_nipype/_subject_id_046/afni_proc/result_afni_proc.pklz"
+        },
+        {
+            "group": 1,
+            "name": "8_afni_proc",
+            "report": "/home/jlefortb/narps_open_pipelines/Afni_proc_through_nipype/_subject_id_043/afni_proc/_report/report.rst",
+            "result": "/home/jlefortb/narps_open_pipelines/Afni_proc_through_nipype/_subject_id_043/afni_proc/result_afni_proc.pklz"
+        },
+        {
+            "group": 1,
+            "name": "9_afni_proc",
+            "report": "/home/jlefortb/narps_open_pipelines/Afni_proc_through_nipype/_subject_id_038/afni_proc/_report/report.rst",
+            "result": "/home/jlefortb/narps_open_pipelines/Afni_proc_through_nipype/_subject_id_038/afni_proc/result_afni_proc.pklz"
+        },
+        {
+            "group": 1,
+            "name": "10_afni_proc",
+            "report": "/home/jlefortb/narps_open_pipelines/Afni_proc_through_nipype/_subject_id_092/afni_proc/_report/report.rst",
+            "result": "/home/jlefortb/narps_open_pipelines/Afni_proc_through_nipype/_subject_id_092/afni_proc/result_afni_proc.pklz"
+        },
+        {
+            "group": 1,
+            "name": "11_afni_proc",
+            "report": "/home/jlefortb/narps_open_pipelines/Afni_proc_through_nipype/_subject_id_029/afni_proc/_report/report.rst",
+            "result": "/home/jlefortb/narps_open_pipelines/Afni_proc_through_nipype/_subject_id_029/afni_proc/result_afni_proc.pklz"
+        },
+        {
+            "group": 1,
+            "name": "12_afni_proc",
+            "report": "/home/jlefortb/narps_open_pipelines/Afni_proc_through_nipype/_subject_id_118/afni_proc/_report/report.rst",
+            "result": "/home/jlefortb/narps_open_pipelines/Afni_proc_through_nipype/_subject_id_118/afni_proc/result_afni_proc.pklz"
+        },
+        {
+            "group": 1,
+            "name": "13_afni_proc",
+            "report": "/home/jlefortb/narps_open_pipelines/Afni_proc_through_nipype/_subject_id_053/afni_proc/_report/report.rst",
+            "result": "/home/jlefortb/narps_open_pipelines/Afni_proc_through_nipype/_subject_id_053/afni_proc/result_afni_proc.pklz"
+        },
+        {
+            "group": 1,
+            "name": "14_afni_proc",
+            "report": "/home/jlefortb/narps_open_pipelines/Afni_proc_through_nipype/_subject_id_077/afni_proc/_report/report.rst",
+            "result": "/home/jlefortb/narps_open_pipelines/Afni_proc_through_nipype/_subject_id_077/afni_proc/result_afni_proc.pklz"
+        },
+        {
+            "group": 1,
+            "name": "15_afni_proc",
+            "report": "/home/jlefortb/narps_open_pipelines/Afni_proc_through_nipype/_subject_id_008/afni_proc/_report/report.rst",
+            "result": "/home/jlefortb/narps_open_pipelines/Afni_proc_through_nipype/_subject_id_008/afni_proc/result_afni_proc.pklz"
+        },
+        {
+            "group": 1,
+            "name": "16_afni_proc",
+            "report": "/home/jlefortb/narps_open_pipelines/Afni_proc_through_nipype/_subject_id_016/afni_proc/_report/report.rst",
+            "result": "/home/jlefortb/narps_open_pipelines/Afni_proc_through_nipype/_subject_id_016/afni_proc/result_afni_proc.pklz"
+        },
+        {
+            "group": 1,
+            "name": "17_afni_proc",
+            "report": "/home/jlefortb/narps_open_pipelines/Afni_proc_through_nipype/_subject_id_011/afni_proc/_report/report.rst",
+            "result": "/home/jlefortb/narps_open_pipelines/Afni_proc_through_nipype/_subject_id_011/afni_proc/result_afni_proc.pklz"
+        },
+        {
+            "group": 1,
+            "name": "18_afni_proc",
+            "report": "/home/jlefortb/narps_open_pipelines/Afni_proc_through_nipype/_subject_id_123/afni_proc/_report/report.rst",
+            "result": "/home/jlefortb/narps_open_pipelines/Afni_proc_through_nipype/_subject_id_123/afni_proc/result_afni_proc.pklz"
+        },
+        {
+            "group": 1,
+            "name": "19_afni_proc",
+            "report": "/home/jlefortb/narps_open_pipelines/Afni_proc_through_nipype/_subject_id_058/afni_proc/_report/report.rst",
+            "result": "/home/jlefortb/narps_open_pipelines/Afni_proc_through_nipype/_subject_id_058/afni_proc/result_afni_proc.pklz"
+        },
+        {
+            "group": 1,
+            "name": "20_afni_proc",
+            "report": "/home/jlefortb/narps_open_pipelines/Afni_proc_through_nipype/_subject_id_069/afni_proc/_report/report.rst",
+            "result": "/home/jlefortb/narps_open_pipelines/Afni_proc_through_nipype/_subject_id_069/afni_proc/result_afni_proc.pklz"
+        },
+        {
+            "group": 1,
+            "name": "21_afni_proc",
+            "report": "/home/jlefortb/narps_open_pipelines/Afni_proc_through_nipype/_subject_id_093/afni_proc/_report/report.rst",
+            "result": "/home/jlefortb/narps_open_pipelines/Afni_proc_through_nipype/_subject_id_093/afni_proc/result_afni_proc.pklz"
+        },
+        {
+            "group": 1,
+            "name": "22_afni_proc",
+            "report": "/home/jlefortb/narps_open_pipelines/Afni_proc_through_nipype/_subject_id_076/afni_proc/_report/report.rst",
+            "result": "/home/jlefortb/narps_open_pipelines/Afni_proc_through_nipype/_subject_id_076/afni_proc/result_afni_proc.pklz"
+        },
+        {
+            "group": 1,
+            "name": "23_afni_proc",
+            "report": "/home/jlefortb/narps_open_pipelines/Afni_proc_through_nipype/_subject_id_071/afni_proc/_report/report.rst",
+            "result": "/home/jlefortb/narps_open_pipelines/Afni_proc_through_nipype/_subject_id_071/afni_proc/result_afni_proc.pklz"
+        },
+        {
+            "group": 1,
+            "name": "24_afni_proc",
+            "report": "/home/jlefortb/narps_open_pipelines/Afni_proc_through_nipype/_subject_id_003/afni_proc/_report/report.rst",
+            "result": "/home/jlefortb/narps_open_pipelines/Afni_proc_through_nipype/_subject_id_003/afni_proc/result_afni_proc.pklz"
+        },
+        {
+            "group": 1,
+            "name": "25_afni_proc",
+            "report": "/home/jlefortb/narps_open_pipelines/Afni_proc_through_nipype/_subject_id_010/afni_proc/_report/report.rst",
+            "result": "/home/jlefortb/narps_open_pipelines/Afni_proc_through_nipype/_subject_id_010/afni_proc/result_afni_proc.pklz"
+        },
+        {
+            "group": 1,
+            "name": "26_afni_proc",
+            "report": "/home/jlefortb/narps_open_pipelines/Afni_proc_through_nipype/_subject_id_096/afni_proc/_report/report.rst",
+            "result": "/home/jlefortb/narps_open_pipelines/Afni_proc_through_nipype/_subject_id_096/afni_proc/result_afni_proc.pklz"
+        },
+        {
+            "group": 1,
+            "name": "27_afni_proc",
+            "report": "/home/jlefortb/narps_open_pipelines/Afni_proc_through_nipype/_subject_id_055/afni_proc/_report/report.rst",
+            "result": "/home/jlefortb/narps_open_pipelines/Afni_proc_through_nipype/_subject_id_055/afni_proc/result_afni_proc.pklz"
+        },
+        {
+            "group": 1,
+            "name": "28_afni_proc",
+            "report": "/home/jlefortb/narps_open_pipelines/Afni_proc_through_nipype/_subject_id_018/afni_proc/_report/report.rst",
+            "result": "/home/jlefortb/narps_open_pipelines/Afni_proc_through_nipype/_subject_id_018/afni_proc/result_afni_proc.pklz"
+        },
+        {
+            "group": 1,
+            "name": "29_afni_proc",
+            "report": "/home/jlefortb/narps_open_pipelines/Afni_proc_through_nipype/_subject_id_026/afni_proc/_report/report.rst",
+            "result": "/home/jlefortb/narps_open_pipelines/Afni_proc_through_nipype/_subject_id_026/afni_proc/result_afni_proc.pklz"
+        },
+        {
+            "group": 1,
+            "name": "30_afni_proc",
+            "report": "/home/jlefortb/narps_open_pipelines/Afni_proc_through_nipype/_subject_id_061/afni_proc/_report/report.rst",
+            "result": "/home/jlefortb/narps_open_pipelines/Afni_proc_through_nipype/_subject_id_061/afni_proc/result_afni_proc.pklz"
+        },
+        {
+            "group": 1,
+            "name": "31_afni_proc",
+            "report": "/home/jlefortb/narps_open_pipelines/Afni_proc_through_nipype/_subject_id_005/afni_proc/_report/report.rst",
+            "result": "/home/jlefortb/narps_open_pipelines/Afni_proc_through_nipype/_subject_id_005/afni_proc/result_afni_proc.pklz"
+        },
+        {
+            "group": 1,
+            "name": "32_afni_proc",
+            "report": "/home/jlefortb/narps_open_pipelines/Afni_proc_through_nipype/_subject_id_121/afni_proc/_report/report.rst",
+            "result": "/home/jlefortb/narps_open_pipelines/Afni_proc_through_nipype/_subject_id_121/afni_proc/result_afni_proc.pklz"
+        },
+        {
+            "group": 1,
+            "name": "33_afni_proc",
+            "report": "/home/jlefortb/narps_open_pipelines/Afni_proc_through_nipype/_subject_id_041/afni_proc/_report/report.rst",
+            "result": "/home/jlefortb/narps_open_pipelines/Afni_proc_through_nipype/_subject_id_041/afni_proc/result_afni_proc.pklz"
+        },
+        {
+            "group": 1,
+            "name": "34_afni_proc",
+            "report": "/home/jlefortb/narps_open_pipelines/Afni_proc_through_nipype/_subject_id_110/afni_proc/_report/report.rst",
+            "result": "/home/jlefortb/narps_open_pipelines/Afni_proc_through_nipype/_subject_id_110/afni_proc/result_afni_proc.pklz"
+        },
+        {
+            "group": 1,
+            "name": "35_afni_proc",
+            "report": "/home/jlefortb/narps_open_pipelines/Afni_proc_through_nipype/_subject_id_049/afni_proc/_report/report.rst",
+            "result": "/home/jlefortb/narps_open_pipelines/Afni_proc_through_nipype/_subject_id_049/afni_proc/result_afni_proc.pklz"
+        },
+        {
+            "group": 1,
+            "name": "36_afni_proc",
+            "report": "/home/jlefortb/narps_open_pipelines/Afni_proc_through_nipype/_subject_id_079/afni_proc/_report/report.rst",
+            "result": "/home/jlefortb/narps_open_pipelines/Afni_proc_through_nipype/_subject_id_079/afni_proc/result_afni_proc.pklz"
+        },
+        {
+            "group": 1,
+            "name": "37_afni_proc",
+            "report": "/home/jlefortb/narps_open_pipelines/Afni_proc_through_nipype/_subject_id_057/afni_proc/_report/report.rst",
+            "result": "/home/jlefortb/narps_open_pipelines/Afni_proc_through_nipype/_subject_id_057/afni_proc/result_afni_proc.pklz"
+        },
+        {
+            "group": 1,
+            "name": "38_afni_proc",
+            "report": "/home/jlefortb/narps_open_pipelines/Afni_proc_through_nipype/_subject_id_108/afni_proc/_report/report.rst",
+            "result": "/home/jlefortb/narps_open_pipelines/Afni_proc_through_nipype/_subject_id_108/afni_proc/result_afni_proc.pklz"
+        },
+        {
+            "group": 1,
+            "name": "39_afni_proc",
+            "report": "/home/jlefortb/narps_open_pipelines/Afni_proc_through_nipype/_subject_id_040/afni_proc/_report/report.rst",
+            "result": "/home/jlefortb/narps_open_pipelines/Afni_proc_through_nipype/_subject_id_040/afni_proc/result_afni_proc.pklz"
+        },
+        {
+            "group": 1,
+            "name": "40_afni_proc",
+            "report": "/home/jlefortb/narps_open_pipelines/Afni_proc_through_nipype/_subject_id_047/afni_proc/_report/report.rst",
+            "result": "/home/jlefortb/narps_open_pipelines/Afni_proc_through_nipype/_subject_id_047/afni_proc/result_afni_proc.pklz"
+        },
+        {
+            "group": 1,
+            "name": "41_afni_proc",
+            "report": "/home/jlefortb/narps_open_pipelines/Afni_proc_through_nipype/_subject_id_106/afni_proc/_report/report.rst",
+            "result": "/home/jlefortb/narps_open_pipelines/Afni_proc_through_nipype/_subject_id_106/afni_proc/result_afni_proc.pklz"
+        },
+        {
+            "group": 1,
+            "name": "42_afni_proc",
+            "report": "/home/jlefortb/narps_open_pipelines/Afni_proc_through_nipype/_subject_id_033/afni_proc/_report/report.rst",
+            "result": "/home/jlefortb/narps_open_pipelines/Afni_proc_through_nipype/_subject_id_033/afni_proc/result_afni_proc.pklz"
+        },
+        {
+            "group": 1,
+            "name": "43_afni_proc",
+            "report": "/home/jlefortb/narps_open_pipelines/Afni_proc_through_nipype/_subject_id_116/afni_proc/_report/report.rst",
+            "result": "/home/jlefortb/narps_open_pipelines/Afni_proc_through_nipype/_subject_id_116/afni_proc/result_afni_proc.pklz"
+        },
+        {
+            "group": 1,
+            "name": "44_afni_proc",
+            "report": "/home/jlefortb/narps_open_pipelines/Afni_proc_through_nipype/_subject_id_105/afni_proc/_report/report.rst",
+            "result": "/home/jlefortb/narps_open_pipelines/Afni_proc_through_nipype/_subject_id_105/afni_proc/result_afni_proc.pklz"
+        },
+        {
+            "group": 1,
+            "name": "45_afni_proc",
+            "report": "/home/jlefortb/narps_open_pipelines/Afni_proc_through_nipype/_subject_id_085/afni_proc/_report/report.rst",
+            "result": "/home/jlefortb/narps_open_pipelines/Afni_proc_through_nipype/_subject_id_085/afni_proc/result_afni_proc.pklz"
+        },
+        {
+            "group": 1,
+            "name": "46_afni_proc",
+            "report": "/home/jlefortb/narps_open_pipelines/Afni_proc_through_nipype/_subject_id_066/afni_proc/_report/report.rst",
+            "result": "/home/jlefortb/narps_open_pipelines/Afni_proc_through_nipype/_subject_id_066/afni_proc/result_afni_proc.pklz"
+        },
+        {
+            "group": 1,
+            "name": "47_afni_proc",
+            "report": "/home/jlefortb/narps_open_pipelines/Afni_proc_through_nipype/_subject_id_020/afni_proc/_report/report.rst",
+            "result": "/home/jlefortb/narps_open_pipelines/Afni_proc_through_nipype/_subject_id_020/afni_proc/result_afni_proc.pklz"
+        },
+        {
+            "group": 1,
+            "name": "48_afni_proc",
+            "report": "/home/jlefortb/narps_open_pipelines/Afni_proc_through_nipype/_subject_id_075/afni_proc/_report/report.rst",
+            "result": "/home/jlefortb/narps_open_pipelines/Afni_proc_through_nipype/_subject_id_075/afni_proc/result_afni_proc.pklz"
+        },
+        {
+            "group": 1,
+            "name": "49_afni_proc",
+            "report": "/home/jlefortb/narps_open_pipelines/Afni_proc_through_nipype/_subject_id_114/afni_proc/_report/report.rst",
+            "result": "/home/jlefortb/narps_open_pipelines/Afni_proc_through_nipype/_subject_id_114/afni_proc/result_afni_proc.pklz"
+        },
+        {
+            "group": 1,
+            "name": "50_afni_proc",
+            "report": "/home/jlefortb/narps_open_pipelines/Afni_proc_through_nipype/_subject_id_072/afni_proc/_report/report.rst",
+            "result": "/home/jlefortb/narps_open_pipelines/Afni_proc_through_nipype/_subject_id_072/afni_proc/result_afni_proc.pklz"
+        },
+        {
+            "group": 1,
+            "name": "51_afni_proc",
+            "report": "/home/jlefortb/narps_open_pipelines/Afni_proc_through_nipype/_subject_id_044/afni_proc/_report/report.rst",
+            "result": "/home/jlefortb/narps_open_pipelines/Afni_proc_through_nipype/_subject_id_044/afni_proc/result_afni_proc.pklz"
+        },
+        {
+            "group": 1,
+            "name": "52_afni_proc",
+            "report": "/home/jlefortb/narps_open_pipelines/Afni_proc_through_nipype/_subject_id_102/afni_proc/_report/report.rst",
+            "result": "/home/jlefortb/narps_open_pipelines/Afni_proc_through_nipype/_subject_id_102/afni_proc/result_afni_proc.pklz"
+        },
+        {
+            "group": 1,
+            "name": "53_afni_proc",
+            "report": "/home/jlefortb/narps_open_pipelines/Afni_proc_through_nipype/_subject_id_099/afni_proc/_report/report.rst",
+            "result": "/home/jlefortb/narps_open_pipelines/Afni_proc_through_nipype/_subject_id_099/afni_proc/result_afni_proc.pklz"
+        },
+        {
+            "group": 1,
+            "name": "54_afni_proc",
+            "report": "/home/jlefortb/narps_open_pipelines/Afni_proc_through_nipype/_subject_id_088/afni_proc/_report/report.rst",
+            "result": "/home/jlefortb/narps_open_pipelines/Afni_proc_through_nipype/_subject_id_088/afni_proc/result_afni_proc.pklz"
+        },
+        {
+            "group": 1,
+            "name": "55_afni_proc",
+            "report": "/home/jlefortb/narps_open_pipelines/Afni_proc_through_nipype/_subject_id_064/afni_proc/_report/report.rst",
+            "result": "/home/jlefortb/narps_open_pipelines/Afni_proc_through_nipype/_subject_id_064/afni_proc/result_afni_proc.pklz"
+        },
+        {
+            "group": 1,
+            "name": "56_afni_proc",
+            "report": "/home/jlefortb/narps_open_pipelines/Afni_proc_through_nipype/_subject_id_063/afni_proc/_report/report.rst",
+            "result": "/home/jlefortb/narps_open_pipelines/Afni_proc_through_nipype/_subject_id_063/afni_proc/result_afni_proc.pklz"
+        },
+        {
+            "group": 1,
+            "name": "57_afni_proc",
+            "report": "/home/jlefortb/narps_open_pipelines/Afni_proc_through_nipype/_subject_id_017/afni_proc/_report/report.rst",
+            "result": "/home/jlefortb/narps_open_pipelines/Afni_proc_through_nipype/_subject_id_017/afni_proc/result_afni_proc.pklz"
+        },
+        {
+            "group": 1,
+            "name": "58_afni_proc",
+            "report": "/home/jlefortb/narps_open_pipelines/Afni_proc_through_nipype/_subject_id_117/afni_proc/_report/report.rst",
+            "result": "/home/jlefortb/narps_open_pipelines/Afni_proc_through_nipype/_subject_id_117/afni_proc/result_afni_proc.pklz"
+        },
+        {
+            "group": 1,
+            "name": "59_afni_proc",
+            "report": "/home/jlefortb/narps_open_pipelines/Afni_proc_through_nipype/_subject_id_056/afni_proc/_report/report.rst",
+            "result": "/home/jlefortb/narps_open_pipelines/Afni_proc_through_nipype/_subject_id_056/afni_proc/result_afni_proc.pklz"
+        },
+        {
+            "group": 1,
+            "name": "60_afni_proc",
+            "report": "/home/jlefortb/narps_open_pipelines/Afni_proc_through_nipype/_subject_id_019/afni_proc/_report/report.rst",
+            "result": "/home/jlefortb/narps_open_pipelines/Afni_proc_through_nipype/_subject_id_019/afni_proc/result_afni_proc.pklz"
+        },
+        {
+            "group": 1,
+            "name": "61_afni_proc",
+            "report": "/home/jlefortb/narps_open_pipelines/Afni_proc_through_nipype/_subject_id_022/afni_proc/_report/report.rst",
+            "result": "/home/jlefortb/narps_open_pipelines/Afni_proc_through_nipype/_subject_id_022/afni_proc/result_afni_proc.pklz"
+        },
+        {
+            "group": 1,
+            "name": "62_afni_proc",
+            "report": "/home/jlefortb/narps_open_pipelines/Afni_proc_through_nipype/_subject_id_024/afni_proc/_report/report.rst",
+            "result": "/home/jlefortb/narps_open_pipelines/Afni_proc_through_nipype/_subject_id_024/afni_proc/result_afni_proc.pklz"
+        },
+        {
+            "group": 1,
+            "name": "63_afni_proc",
+            "report": "/home/jlefortb/narps_open_pipelines/Afni_proc_through_nipype/_subject_id_090/afni_proc/_report/report.rst",
+            "result": "/home/jlefortb/narps_open_pipelines/Afni_proc_through_nipype/_subject_id_090/afni_proc/result_afni_proc.pklz"
+        },
+        {
+            "group": 1,
+            "name": "64_afni_proc",
+            "report": "/home/jlefortb/narps_open_pipelines/Afni_proc_through_nipype/_subject_id_124/afni_proc/_report/report.rst",
+            "result": "/home/jlefortb/narps_open_pipelines/Afni_proc_through_nipype/_subject_id_124/afni_proc/result_afni_proc.pklz"
+        },
+        {
+            "group": 1,
+            "name": "65_afni_proc",
+            "report": "/home/jlefortb/narps_open_pipelines/Afni_proc_through_nipype/_subject_id_067/afni_proc/_report/report.rst",
+            "result": "/home/jlefortb/narps_open_pipelines/Afni_proc_through_nipype/_subject_id_067/afni_proc/result_afni_proc.pklz"
+        },
+        {
+            "group": 1,
+            "name": "66_afni_proc",
+            "report": "/home/jlefortb/narps_open_pipelines/Afni_proc_through_nipype/_subject_id_094/afni_proc/_report/report.rst",
+            "result": "/home/jlefortb/narps_open_pipelines/Afni_proc_through_nipype/_subject_id_094/afni_proc/result_afni_proc.pklz"
+        },
+        {
+            "group": 1,
+            "name": "67_afni_proc",
+            "report": "/home/jlefortb/narps_open_pipelines/Afni_proc_through_nipype/_subject_id_039/afni_proc/_report/report.rst",
+            "result": "/home/jlefortb/narps_open_pipelines/Afni_proc_through_nipype/_subject_id_039/afni_proc/result_afni_proc.pklz"
+        },
+        {
+            "group": 1,
+            "name": "68_afni_proc",
+            "report": "/home/jlefortb/narps_open_pipelines/Afni_proc_through_nipype/_subject_id_074/afni_proc/_report/report.rst",
+            "result": "/home/jlefortb/narps_open_pipelines/Afni_proc_through_nipype/_subject_id_074/afni_proc/result_afni_proc.pklz"
+        },
+        {
+            "group": 1,
+            "name": "69_afni_proc",
+            "report": "/home/jlefortb/narps_open_pipelines/Afni_proc_through_nipype/_subject_id_030/afni_proc/_report/report.rst",
+            "result": "/home/jlefortb/narps_open_pipelines/Afni_proc_through_nipype/_subject_id_030/afni_proc/result_afni_proc.pklz"
+        },
+        {
+            "group": 1,
+            "name": "70_afni_proc",
+            "report": "/home/jlefortb/narps_open_pipelines/Afni_proc_through_nipype/_subject_id_050/afni_proc/_report/report.rst",
+            "result": "/home/jlefortb/narps_open_pipelines/Afni_proc_through_nipype/_subject_id_050/afni_proc/result_afni_proc.pklz"
+        },
+        {
+            "group": 1,
+            "name": "71_afni_proc",
+            "report": "/home/jlefortb/narps_open_pipelines/Afni_proc_through_nipype/_subject_id_001/afni_proc/_report/report.rst",
+            "result": "/home/jlefortb/narps_open_pipelines/Afni_proc_through_nipype/_subject_id_001/afni_proc/result_afni_proc.pklz"
+        },
+        {
+            "group": 1,
+            "name": "72_afni_proc",
+            "report": "/home/jlefortb/narps_open_pipelines/Afni_proc_through_nipype/_subject_id_119/afni_proc/_report/report.rst",
+            "result": "/home/jlefortb/narps_open_pipelines/Afni_proc_through_nipype/_subject_id_119/afni_proc/result_afni_proc.pklz"
+        },
+        {
+            "group": 1,
+            "name": "73_afni_proc",
+            "report": "/home/jlefortb/narps_open_pipelines/Afni_proc_through_nipype/_subject_id_032/afni_proc/_report/report.rst",
+            "result": "/home/jlefortb/narps_open_pipelines/Afni_proc_through_nipype/_subject_id_032/afni_proc/result_afni_proc.pklz"
+        },
+        {
+            "group": 1,
+            "name": "74_afni_proc",
+            "report": "/home/jlefortb/narps_open_pipelines/Afni_proc_through_nipype/_subject_id_100/afni_proc/_report/report.rst",
+            "result": "/home/jlefortb/narps_open_pipelines/Afni_proc_through_nipype/_subject_id_100/afni_proc/result_afni_proc.pklz"
+        },
+        {
+            "group": 1,
+            "name": "75_afni_proc",
+            "report": "/home/jlefortb/narps_open_pipelines/Afni_proc_through_nipype/_subject_id_015/afni_proc/_report/report.rst",
+            "result": "/home/jlefortb/narps_open_pipelines/Afni_proc_through_nipype/_subject_id_015/afni_proc/result_afni_proc.pklz"
+        },
+        {
+            "group": 1,
+            "name": "76_afni_proc",
+            "report": "/home/jlefortb/narps_open_pipelines/Afni_proc_through_nipype/_subject_id_103/afni_proc/_report/report.rst",
+            "result": "/home/jlefortb/narps_open_pipelines/Afni_proc_through_nipype/_subject_id_103/afni_proc/result_afni_proc.pklz"
+        },
+        {
+            "group": 1,
+            "name": "77_afni_proc",
+            "report": "/home/jlefortb/narps_open_pipelines/Afni_proc_through_nipype/_subject_id_045/afni_proc/_report/report.rst",
+            "result": "/home/jlefortb/narps_open_pipelines/Afni_proc_through_nipype/_subject_id_045/afni_proc/result_afni_proc.pklz"
+        },
+        {
+            "group": 1,
+            "name": "78_afni_proc",
+            "report": "/home/jlefortb/narps_open_pipelines/Afni_proc_through_nipype/_subject_id_084/afni_proc/_report/report.rst",
+            "result": "/home/jlefortb/narps_open_pipelines/Afni_proc_through_nipype/_subject_id_084/afni_proc/result_afni_proc.pklz"
+        },
+        {
+            "group": 1,
+            "name": "79_afni_proc",
+            "report": "/home/jlefortb/narps_open_pipelines/Afni_proc_through_nipype/_subject_id_059/afni_proc/_report/report.rst",
+            "result": "/home/jlefortb/narps_open_pipelines/Afni_proc_through_nipype/_subject_id_059/afni_proc/result_afni_proc.pklz"
+        },
+        {
+            "group": 1,
+            "name": "80_afni_proc",
+            "report": "/home/jlefortb/narps_open_pipelines/Afni_proc_through_nipype/_subject_id_025/afni_proc/_report/report.rst",
+            "result": "/home/jlefortb/narps_open_pipelines/Afni_proc_through_nipype/_subject_id_025/afni_proc/result_afni_proc.pklz"
+        },
+        {
+            "group": 1,
+            "name": "81_afni_proc",
+            "report": "/home/jlefortb/narps_open_pipelines/Afni_proc_through_nipype/_subject_id_112/afni_proc/_report/report.rst",
+            "result": "/home/jlefortb/narps_open_pipelines/Afni_proc_through_nipype/_subject_id_112/afni_proc/result_afni_proc.pklz"
+        },
+        {
+            "group": 1,
+            "name": "82_afni_proc",
+            "report": "/home/jlefortb/narps_open_pipelines/Afni_proc_through_nipype/_subject_id_009/afni_proc/_report/report.rst",
+            "result": "/home/jlefortb/narps_open_pipelines/Afni_proc_through_nipype/_subject_id_009/afni_proc/result_afni_proc.pklz"
+        },
+        {
+            "group": 1,
+            "name": "83_afni_proc",
+            "report": "/home/jlefortb/narps_open_pipelines/Afni_proc_through_nipype/_subject_id_115/afni_proc/_report/report.rst",
+            "result": "/home/jlefortb/narps_open_pipelines/Afni_proc_through_nipype/_subject_id_115/afni_proc/result_afni_proc.pklz"
+        },
+        {
+            "group": 1,
+            "name": "84_afni_proc",
+            "report": "/home/jlefortb/narps_open_pipelines/Afni_proc_through_nipype/_subject_id_073/afni_proc/_report/report.rst",
+            "result": "/home/jlefortb/narps_open_pipelines/Afni_proc_through_nipype/_subject_id_073/afni_proc/result_afni_proc.pklz"
+        },
+        {
+            "group": 1,
+            "name": "85_afni_proc",
+            "report": "/home/jlefortb/narps_open_pipelines/Afni_proc_through_nipype/_subject_id_027/afni_proc/_report/report.rst",
+            "result": "/home/jlefortb/narps_open_pipelines/Afni_proc_through_nipype/_subject_id_027/afni_proc/result_afni_proc.pklz"
+        },
+        {
+            "group": 1,
+            "name": "86_afni_proc",
+            "report": "/home/jlefortb/narps_open_pipelines/Afni_proc_through_nipype/_subject_id_104/afni_proc/_report/report.rst",
+            "result": "/home/jlefortb/narps_open_pipelines/Afni_proc_through_nipype/_subject_id_104/afni_proc/result_afni_proc.pklz"
+        },
+        {
+            "group": 1,
+            "name": "87_afni_proc",
+            "report": "/home/jlefortb/narps_open_pipelines/Afni_proc_through_nipype/_subject_id_083/afni_proc/_report/report.rst",
+            "result": "/home/jlefortb/narps_open_pipelines/Afni_proc_through_nipype/_subject_id_083/afni_proc/result_afni_proc.pklz"
+        },
+        {
+            "group": 1,
+            "name": "88_afni_proc",
+            "report": "/home/jlefortb/narps_open_pipelines/Afni_proc_through_nipype/_subject_id_095/afni_proc/_report/report.rst",
+            "result": "/home/jlefortb/narps_open_pipelines/Afni_proc_through_nipype/_subject_id_095/afni_proc/result_afni_proc.pklz"
+        },
+        {
+            "group": 1,
+            "name": "89_afni_proc",
+            "report": "/home/jlefortb/narps_open_pipelines/Afni_proc_through_nipype/_subject_id_037/afni_proc/_report/report.rst",
+            "result": "/home/jlefortb/narps_open_pipelines/Afni_proc_through_nipype/_subject_id_037/afni_proc/result_afni_proc.pklz"
+        },
+        {
+            "group": 1,
+            "name": "90_afni_proc",
+            "report": "/home/jlefortb/narps_open_pipelines/Afni_proc_through_nipype/_subject_id_051/afni_proc/_report/report.rst",
+            "result": "/home/jlefortb/narps_open_pipelines/Afni_proc_through_nipype/_subject_id_051/afni_proc/result_afni_proc.pklz"
+        },
+        {
+            "group": 1,
+            "name": "91_afni_proc",
+            "report": "/home/jlefortb/narps_open_pipelines/Afni_proc_through_nipype/_subject_id_107/afni_proc/_report/report.rst",
+            "result": "/home/jlefortb/narps_open_pipelines/Afni_proc_through_nipype/_subject_id_107/afni_proc/result_afni_proc.pklz"
+        },
+        {
+            "group": 1,
+            "name": "92_afni_proc",
+            "report": "/home/jlefortb/narps_open_pipelines/Afni_proc_through_nipype/_subject_id_052/afni_proc/_report/report.rst",
+            "result": "/home/jlefortb/narps_open_pipelines/Afni_proc_through_nipype/_subject_id_052/afni_proc/result_afni_proc.pklz"
+        },
+        {
+            "group": 1,
+            "name": "93_afni_proc",
+            "report": "/home/jlefortb/narps_open_pipelines/Afni_proc_through_nipype/_subject_id_087/afni_proc/_report/report.rst",
+            "result": "/home/jlefortb/narps_open_pipelines/Afni_proc_through_nipype/_subject_id_087/afni_proc/result_afni_proc.pklz"
+        },
+        {
+            "group": 1,
+            "name": "94_afni_proc",
+            "report": "/home/jlefortb/narps_open_pipelines/Afni_proc_through_nipype/_subject_id_060/afni_proc/_report/report.rst",
+            "result": "/home/jlefortb/narps_open_pipelines/Afni_proc_through_nipype/_subject_id_060/afni_proc/result_afni_proc.pklz"
+        },
+        {
+            "group": 1,
+            "name": "95_afni_proc",
+            "report": "/home/jlefortb/narps_open_pipelines/Afni_proc_through_nipype/_subject_id_035/afni_proc/_report/report.rst",
+            "result": "/home/jlefortb/narps_open_pipelines/Afni_proc_through_nipype/_subject_id_035/afni_proc/result_afni_proc.pklz"
+        },
+        {
+            "group": 1,
+            "name": "96_afni_proc",
+            "report": "/home/jlefortb/narps_open_pipelines/Afni_proc_through_nipype/_subject_id_070/afni_proc/_report/report.rst",
+            "result": "/home/jlefortb/narps_open_pipelines/Afni_proc_through_nipype/_subject_id_070/afni_proc/result_afni_proc.pklz"
+        },
+        {
+            "group": 1,
+            "name": "97_afni_proc",
+            "report": "/home/jlefortb/narps_open_pipelines/Afni_proc_through_nipype/_subject_id_081/afni_proc/_report/report.rst",
+            "result": "/home/jlefortb/narps_open_pipelines/Afni_proc_through_nipype/_subject_id_081/afni_proc/result_afni_proc.pklz"
+        },
+        {
+            "group": 1,
+            "name": "98_afni_proc",
+            "report": "/home/jlefortb/narps_open_pipelines/Afni_proc_through_nipype/_subject_id_120/afni_proc/_report/report.rst",
+            "result": "/home/jlefortb/narps_open_pipelines/Afni_proc_through_nipype/_subject_id_120/afni_proc/result_afni_proc.pklz"
+        },
+        {
+            "group": 1,
+            "name": "99_afni_proc",
+            "report": "/home/jlefortb/narps_open_pipelines/Afni_proc_through_nipype/_subject_id_109/afni_proc/_report/report.rst",
+            "result": "/home/jlefortb/narps_open_pipelines/Afni_proc_through_nipype/_subject_id_109/afni_proc/result_afni_proc.pklz"
+        },
+        {
+            "group": 1,
+            "name": "100_afni_proc",
+            "report": "/home/jlefortb/narps_open_pipelines/Afni_proc_through_nipype/_subject_id_036/afni_proc/_report/report.rst",
+            "result": "/home/jlefortb/narps_open_pipelines/Afni_proc_through_nipype/_subject_id_036/afni_proc/result_afni_proc.pklz"
+        },
+        {
+            "group": 1,
+            "name": "101_afni_proc",
+            "report": "/home/jlefortb/narps_open_pipelines/Afni_proc_through_nipype/_subject_id_006/afni_proc/_report/report.rst",
+            "result": "/home/jlefortb/narps_open_pipelines/Afni_proc_through_nipype/_subject_id_006/afni_proc/result_afni_proc.pklz"
+        },
+        {
+            "group": 1,
+            "name": "102_afni_proc",
+            "report": "/home/jlefortb/narps_open_pipelines/Afni_proc_through_nipype/_subject_id_098/afni_proc/_report/report.rst",
+            "result": "/home/jlefortb/narps_open_pipelines/Afni_proc_through_nipype/_subject_id_098/afni_proc/result_afni_proc.pklz"
+        },
+        {
+            "group": 1,
+            "name": "103_afni_proc",
+            "report": "/home/jlefortb/narps_open_pipelines/Afni_proc_through_nipype/_subject_id_014/afni_proc/_report/report.rst",
+            "result": "/home/jlefortb/narps_open_pipelines/Afni_proc_through_nipype/_subject_id_014/afni_proc/result_afni_proc.pklz"
+        },
+        {
+            "group": 1,
+            "name": "104_afni_proc",
+            "report": "/home/jlefortb/narps_open_pipelines/Afni_proc_through_nipype/_subject_id_062/afni_proc/_report/report.rst",
+            "result": "/home/jlefortb/narps_open_pipelines/Afni_proc_through_nipype/_subject_id_062/afni_proc/result_afni_proc.pklz"
+        },
+        {
+            "group": 1,
+            "name": "105_afni_proc",
+            "report": "/home/jlefortb/narps_open_pipelines/Afni_proc_through_nipype/_subject_id_113/afni_proc/_report/report.rst",
+            "result": "/home/jlefortb/narps_open_pipelines/Afni_proc_through_nipype/_subject_id_113/afni_proc/result_afni_proc.pklz"
+        },
+        {
+            "group": 1,
+            "name": "106_afni_proc",
+            "report": "/home/jlefortb/narps_open_pipelines/Afni_proc_through_nipype/_subject_id_068/afni_proc/_report/report.rst",
+            "result": "/home/jlefortb/narps_open_pipelines/Afni_proc_through_nipype/_subject_id_068/afni_proc/result_afni_proc.pklz"
+        },
+        {
+            "group": 1,
+            "name": "107_afni_proc",
+            "report": "/home/jlefortb/narps_open_pipelines/Afni_proc_through_nipype/_subject_id_054/afni_proc/_report/report.rst",
+            "result": "/home/jlefortb/narps_open_pipelines/Afni_proc_through_nipype/_subject_id_054/afni_proc/result_afni_proc.pklz"
+        },
+        {
+            "group": 1,
+            "name": "108_afni_proc",
+            "report": "/home/jlefortb/narps_open_pipelines/Afni_proc_through_nipype/_subject_id_080/afni_proc/_report/report.rst",
+            "result": "/home/jlefortb/narps_open_pipelines/Afni_proc_through_nipype/_subject_id_080/afni_proc/result_afni_proc.pklz"
+        },
+        {
+            "group": 2,
+            "name": "109_create_stimuli",
+            "report": "/home/jlefortb/narps_open_pipelines/Afni_proc_through_nipype/_subject_id_082/create_stimuli/_report/report.rst",
+            "result": "/home/jlefortb/narps_open_pipelines/Afni_proc_through_nipype/_subject_id_082/create_stimuli/result_create_stimuli.pklz"
+        },
+        {
+            "group": 3,
+            "name": "110_create_stimuli",
+            "report": "/home/jlefortb/narps_open_pipelines/Afni_proc_through_nipype/_subject_id_013/create_stimuli/_report/report.rst",
+            "result": "/home/jlefortb/narps_open_pipelines/Afni_proc_through_nipype/_subject_id_013/create_stimuli/result_create_stimuli.pklz"
+        },
+        {
+            "group": 4,
+            "name": "111_create_stimuli",
+            "report": "/home/jlefortb/narps_open_pipelines/Afni_proc_through_nipype/_subject_id_021/create_stimuli/_report/report.rst",
+            "result": "/home/jlefortb/narps_open_pipelines/Afni_proc_through_nipype/_subject_id_021/create_stimuli/result_create_stimuli.pklz"
+        },
+        {
+            "group": 5,
+            "name": "112_create_stimuli",
+            "report": "/home/jlefortb/narps_open_pipelines/Afni_proc_through_nipype/_subject_id_089/create_stimuli/_report/report.rst",
+            "result": "/home/jlefortb/narps_open_pipelines/Afni_proc_through_nipype/_subject_id_089/create_stimuli/result_create_stimuli.pklz"
+        },
+        {
+            "group": 6,
+            "name": "113_create_stimuli",
+            "report": "/home/jlefortb/narps_open_pipelines/Afni_proc_through_nipype/_subject_id_004/create_stimuli/_report/report.rst",
+            "result": "/home/jlefortb/narps_open_pipelines/Afni_proc_through_nipype/_subject_id_004/create_stimuli/result_create_stimuli.pklz"
+        },
+        {
+            "group": 7,
+            "name": "114_create_stimuli",
+            "report": "/home/jlefortb/narps_open_pipelines/Afni_proc_through_nipype/_subject_id_002/create_stimuli/_report/report.rst",
+            "result": "/home/jlefortb/narps_open_pipelines/Afni_proc_through_nipype/_subject_id_002/create_stimuli/result_create_stimuli.pklz"
+        },
+        {
+            "group": 8,
+            "name": "115_create_stimuli",
+            "report": "/home/jlefortb/narps_open_pipelines/Afni_proc_through_nipype/_subject_id_046/create_stimuli/_report/report.rst",
+            "result": "/home/jlefortb/narps_open_pipelines/Afni_proc_through_nipype/_subject_id_046/create_stimuli/result_create_stimuli.pklz"
+        },
+        {
+            "group": 9,
+            "name": "116_create_stimuli",
+            "report": "/home/jlefortb/narps_open_pipelines/Afni_proc_through_nipype/_subject_id_043/create_stimuli/_report/report.rst",
+            "result": "/home/jlefortb/narps_open_pipelines/Afni_proc_through_nipype/_subject_id_043/create_stimuli/result_create_stimuli.pklz"
+        },
+        {
+            "group": 10,
+            "name": "117_create_stimuli",
+            "report": "/home/jlefortb/narps_open_pipelines/Afni_proc_through_nipype/_subject_id_038/create_stimuli/_report/report.rst",
+            "result": "/home/jlefortb/narps_open_pipelines/Afni_proc_through_nipype/_subject_id_038/create_stimuli/result_create_stimuli.pklz"
+        },
+        {
+            "group": 11,
+            "name": "118_create_stimuli",
+            "report": "/home/jlefortb/narps_open_pipelines/Afni_proc_through_nipype/_subject_id_092/create_stimuli/_report/report.rst",
+            "result": "/home/jlefortb/narps_open_pipelines/Afni_proc_through_nipype/_subject_id_092/create_stimuli/result_create_stimuli.pklz"
+        },
+        {
+            "group": 12,
+            "name": "119_create_stimuli",
+            "report": "/home/jlefortb/narps_open_pipelines/Afni_proc_through_nipype/_subject_id_029/create_stimuli/_report/report.rst",
+            "result": "/home/jlefortb/narps_open_pipelines/Afni_proc_through_nipype/_subject_id_029/create_stimuli/result_create_stimuli.pklz"
+        },
+        {
+            "group": 13,
+            "name": "120_create_stimuli",
+            "report": "/home/jlefortb/narps_open_pipelines/Afni_proc_through_nipype/_subject_id_118/create_stimuli/_report/report.rst",
+            "result": "/home/jlefortb/narps_open_pipelines/Afni_proc_through_nipype/_subject_id_118/create_stimuli/result_create_stimuli.pklz"
+        },
+        {
+            "group": 14,
+            "name": "121_create_stimuli",
+            "report": "/home/jlefortb/narps_open_pipelines/Afni_proc_through_nipype/_subject_id_053/create_stimuli/_report/report.rst",
+            "result": "/home/jlefortb/narps_open_pipelines/Afni_proc_through_nipype/_subject_id_053/create_stimuli/result_create_stimuli.pklz"
+        },
+        {
+            "group": 15,
+            "name": "122_create_stimuli",
+            "report": "/home/jlefortb/narps_open_pipelines/Afni_proc_through_nipype/_subject_id_077/create_stimuli/_report/report.rst",
+            "result": "/home/jlefortb/narps_open_pipelines/Afni_proc_through_nipype/_subject_id_077/create_stimuli/result_create_stimuli.pklz"
+        },
+        {
+            "group": 16,
+            "name": "123_create_stimuli",
+            "report": "/home/jlefortb/narps_open_pipelines/Afni_proc_through_nipype/_subject_id_008/create_stimuli/_report/report.rst",
+            "result": "/home/jlefortb/narps_open_pipelines/Afni_proc_through_nipype/_subject_id_008/create_stimuli/result_create_stimuli.pklz"
+        },
+        {
+            "group": 17,
+            "name": "124_create_stimuli",
+            "report": "/home/jlefortb/narps_open_pipelines/Afni_proc_through_nipype/_subject_id_016/create_stimuli/_report/report.rst",
+            "result": "/home/jlefortb/narps_open_pipelines/Afni_proc_through_nipype/_subject_id_016/create_stimuli/result_create_stimuli.pklz"
+        },
+        {
+            "group": 18,
+            "name": "125_create_stimuli",
+            "report": "/home/jlefortb/narps_open_pipelines/Afni_proc_through_nipype/_subject_id_011/create_stimuli/_report/report.rst",
+            "result": "/home/jlefortb/narps_open_pipelines/Afni_proc_through_nipype/_subject_id_011/create_stimuli/result_create_stimuli.pklz"
+        },
+        {
+            "group": 19,
+            "name": "126_create_stimuli",
+            "report": "/home/jlefortb/narps_open_pipelines/Afni_proc_through_nipype/_subject_id_123/create_stimuli/_report/report.rst",
+            "result": "/home/jlefortb/narps_open_pipelines/Afni_proc_through_nipype/_subject_id_123/create_stimuli/result_create_stimuli.pklz"
+        },
+        {
+            "group": 20,
+            "name": "127_create_stimuli",
+            "report": "/home/jlefortb/narps_open_pipelines/Afni_proc_through_nipype/_subject_id_058/create_stimuli/_report/report.rst",
+            "result": "/home/jlefortb/narps_open_pipelines/Afni_proc_through_nipype/_subject_id_058/create_stimuli/result_create_stimuli.pklz"
+        },
+        {
+            "group": 21,
+            "name": "128_create_stimuli",
+            "report": "/home/jlefortb/narps_open_pipelines/Afni_proc_through_nipype/_subject_id_069/create_stimuli/_report/report.rst",
+            "result": "/home/jlefortb/narps_open_pipelines/Afni_proc_through_nipype/_subject_id_069/create_stimuli/result_create_stimuli.pklz"
+        },
+        {
+            "group": 22,
+            "name": "129_create_stimuli",
+            "report": "/home/jlefortb/narps_open_pipelines/Afni_proc_through_nipype/_subject_id_093/create_stimuli/_report/report.rst",
+            "result": "/home/jlefortb/narps_open_pipelines/Afni_proc_through_nipype/_subject_id_093/create_stimuli/result_create_stimuli.pklz"
+        },
+        {
+            "group": 23,
+            "name": "130_create_stimuli",
+            "report": "/home/jlefortb/narps_open_pipelines/Afni_proc_through_nipype/_subject_id_076/create_stimuli/_report/report.rst",
+            "result": "/home/jlefortb/narps_open_pipelines/Afni_proc_through_nipype/_subject_id_076/create_stimuli/result_create_stimuli.pklz"
+        },
+        {
+            "group": 24,
+            "name": "131_create_stimuli",
+            "report": "/home/jlefortb/narps_open_pipelines/Afni_proc_through_nipype/_subject_id_071/create_stimuli/_report/report.rst",
+            "result": "/home/jlefortb/narps_open_pipelines/Afni_proc_through_nipype/_subject_id_071/create_stimuli/result_create_stimuli.pklz"
+        },
+        {
+            "group": 25,
+            "name": "132_create_stimuli",
+            "report": "/home/jlefortb/narps_open_pipelines/Afni_proc_through_nipype/_subject_id_003/create_stimuli/_report/report.rst",
+            "result": "/home/jlefortb/narps_open_pipelines/Afni_proc_through_nipype/_subject_id_003/create_stimuli/result_create_stimuli.pklz"
+        },
+        {
+            "group": 26,
+            "name": "133_create_stimuli",
+            "report": "/home/jlefortb/narps_open_pipelines/Afni_proc_through_nipype/_subject_id_010/create_stimuli/_report/report.rst",
+            "result": "/home/jlefortb/narps_open_pipelines/Afni_proc_through_nipype/_subject_id_010/create_stimuli/result_create_stimuli.pklz"
+        },
+        {
+            "group": 27,
+            "name": "134_create_stimuli",
+            "report": "/home/jlefortb/narps_open_pipelines/Afni_proc_through_nipype/_subject_id_096/create_stimuli/_report/report.rst",
+            "result": "/home/jlefortb/narps_open_pipelines/Afni_proc_through_nipype/_subject_id_096/create_stimuli/result_create_stimuli.pklz"
+        },
+        {
+            "group": 28,
+            "name": "135_create_stimuli",
+            "report": "/home/jlefortb/narps_open_pipelines/Afni_proc_through_nipype/_subject_id_055/create_stimuli/_report/report.rst",
+            "result": "/home/jlefortb/narps_open_pipelines/Afni_proc_through_nipype/_subject_id_055/create_stimuli/result_create_stimuli.pklz"
+        },
+        {
+            "group": 29,
+            "name": "136_create_stimuli",
+            "report": "/home/jlefortb/narps_open_pipelines/Afni_proc_through_nipype/_subject_id_018/create_stimuli/_report/report.rst",
+            "result": "/home/jlefortb/narps_open_pipelines/Afni_proc_through_nipype/_subject_id_018/create_stimuli/result_create_stimuli.pklz"
+        },
+        {
+            "group": 30,
+            "name": "137_create_stimuli",
+            "report": "/home/jlefortb/narps_open_pipelines/Afni_proc_through_nipype/_subject_id_026/create_stimuli/_report/report.rst",
+            "result": "/home/jlefortb/narps_open_pipelines/Afni_proc_through_nipype/_subject_id_026/create_stimuli/result_create_stimuli.pklz"
+        },
+        {
+            "group": 31,
+            "name": "138_create_stimuli",
+            "report": "/home/jlefortb/narps_open_pipelines/Afni_proc_through_nipype/_subject_id_061/create_stimuli/_report/report.rst",
+            "result": "/home/jlefortb/narps_open_pipelines/Afni_proc_through_nipype/_subject_id_061/create_stimuli/result_create_stimuli.pklz"
+        },
+        {
+            "group": 32,
+            "name": "139_create_stimuli",
+            "report": "/home/jlefortb/narps_open_pipelines/Afni_proc_through_nipype/_subject_id_005/create_stimuli/_report/report.rst",
+            "result": "/home/jlefortb/narps_open_pipelines/Afni_proc_through_nipype/_subject_id_005/create_stimuli/result_create_stimuli.pklz"
+        },
+        {
+            "group": 33,
+            "name": "140_create_stimuli",
+            "report": "/home/jlefortb/narps_open_pipelines/Afni_proc_through_nipype/_subject_id_121/create_stimuli/_report/report.rst",
+            "result": "/home/jlefortb/narps_open_pipelines/Afni_proc_through_nipype/_subject_id_121/create_stimuli/result_create_stimuli.pklz"
+        },
+        {
+            "group": 34,
+            "name": "141_create_stimuli",
+            "report": "/home/jlefortb/narps_open_pipelines/Afni_proc_through_nipype/_subject_id_041/create_stimuli/_report/report.rst",
+            "result": "/home/jlefortb/narps_open_pipelines/Afni_proc_through_nipype/_subject_id_041/create_stimuli/result_create_stimuli.pklz"
+        },
+        {
+            "group": 35,
+            "name": "142_create_stimuli",
+            "report": "/home/jlefortb/narps_open_pipelines/Afni_proc_through_nipype/_subject_id_110/create_stimuli/_report/report.rst",
+            "result": "/home/jlefortb/narps_open_pipelines/Afni_proc_through_nipype/_subject_id_110/create_stimuli/result_create_stimuli.pklz"
+        },
+        {
+            "group": 36,
+            "name": "143_create_stimuli",
+            "report": "/home/jlefortb/narps_open_pipelines/Afni_proc_through_nipype/_subject_id_049/create_stimuli/_report/report.rst",
+            "result": "/home/jlefortb/narps_open_pipelines/Afni_proc_through_nipype/_subject_id_049/create_stimuli/result_create_stimuli.pklz"
+        },
+        {
+            "group": 37,
+            "name": "144_create_stimuli",
+            "report": "/home/jlefortb/narps_open_pipelines/Afni_proc_through_nipype/_subject_id_079/create_stimuli/_report/report.rst",
+            "result": "/home/jlefortb/narps_open_pipelines/Afni_proc_through_nipype/_subject_id_079/create_stimuli/result_create_stimuli.pklz"
+        },
+        {
+            "group": 38,
+            "name": "145_create_stimuli",
+            "report": "/home/jlefortb/narps_open_pipelines/Afni_proc_through_nipype/_subject_id_057/create_stimuli/_report/report.rst",
+            "result": "/home/jlefortb/narps_open_pipelines/Afni_proc_through_nipype/_subject_id_057/create_stimuli/result_create_stimuli.pklz"
+        },
+        {
+            "group": 39,
+            "name": "146_create_stimuli",
+            "report": "/home/jlefortb/narps_open_pipelines/Afni_proc_through_nipype/_subject_id_108/create_stimuli/_report/report.rst",
+            "result": "/home/jlefortb/narps_open_pipelines/Afni_proc_through_nipype/_subject_id_108/create_stimuli/result_create_stimuli.pklz"
+        },
+        {
+            "group": 40,
+            "name": "147_create_stimuli",
+            "report": "/home/jlefortb/narps_open_pipelines/Afni_proc_through_nipype/_subject_id_040/create_stimuli/_report/report.rst",
+            "result": "/home/jlefortb/narps_open_pipelines/Afni_proc_through_nipype/_subject_id_040/create_stimuli/result_create_stimuli.pklz"
+        },
+        {
+            "group": 41,
+            "name": "148_create_stimuli",
+            "report": "/home/jlefortb/narps_open_pipelines/Afni_proc_through_nipype/_subject_id_047/create_stimuli/_report/report.rst",
+            "result": "/home/jlefortb/narps_open_pipelines/Afni_proc_through_nipype/_subject_id_047/create_stimuli/result_create_stimuli.pklz"
+        },
+        {
+            "group": 42,
+            "name": "149_create_stimuli",
+            "report": "/home/jlefortb/narps_open_pipelines/Afni_proc_through_nipype/_subject_id_106/create_stimuli/_report/report.rst",
+            "result": "/home/jlefortb/narps_open_pipelines/Afni_proc_through_nipype/_subject_id_106/create_stimuli/result_create_stimuli.pklz"
+        },
+        {
+            "group": 43,
+            "name": "150_create_stimuli",
+            "report": "/home/jlefortb/narps_open_pipelines/Afni_proc_through_nipype/_subject_id_033/create_stimuli/_report/report.rst",
+            "result": "/home/jlefortb/narps_open_pipelines/Afni_proc_through_nipype/_subject_id_033/create_stimuli/result_create_stimuli.pklz"
+        },
+        {
+            "group": 44,
+            "name": "151_create_stimuli",
+            "report": "/home/jlefortb/narps_open_pipelines/Afni_proc_through_nipype/_subject_id_116/create_stimuli/_report/report.rst",
+            "result": "/home/jlefortb/narps_open_pipelines/Afni_proc_through_nipype/_subject_id_116/create_stimuli/result_create_stimuli.pklz"
+        },
+        {
+            "group": 45,
+            "name": "152_create_stimuli",
+            "report": "/home/jlefortb/narps_open_pipelines/Afni_proc_through_nipype/_subject_id_105/create_stimuli/_report/report.rst",
+            "result": "/home/jlefortb/narps_open_pipelines/Afni_proc_through_nipype/_subject_id_105/create_stimuli/result_create_stimuli.pklz"
+        },
+        {
+            "group": 46,
+            "name": "153_create_stimuli",
+            "report": "/home/jlefortb/narps_open_pipelines/Afni_proc_through_nipype/_subject_id_085/create_stimuli/_report/report.rst",
+            "result": "/home/jlefortb/narps_open_pipelines/Afni_proc_through_nipype/_subject_id_085/create_stimuli/result_create_stimuli.pklz"
+        },
+        {
+            "group": 47,
+            "name": "154_create_stimuli",
+            "report": "/home/jlefortb/narps_open_pipelines/Afni_proc_through_nipype/_subject_id_066/create_stimuli/_report/report.rst",
+            "result": "/home/jlefortb/narps_open_pipelines/Afni_proc_through_nipype/_subject_id_066/create_stimuli/result_create_stimuli.pklz"
+        },
+        {
+            "group": 48,
+            "name": "155_create_stimuli",
+            "report": "/home/jlefortb/narps_open_pipelines/Afni_proc_through_nipype/_subject_id_020/create_stimuli/_report/report.rst",
+            "result": "/home/jlefortb/narps_open_pipelines/Afni_proc_through_nipype/_subject_id_020/create_stimuli/result_create_stimuli.pklz"
+        },
+        {
+            "group": 49,
+            "name": "156_create_stimuli",
+            "report": "/home/jlefortb/narps_open_pipelines/Afni_proc_through_nipype/_subject_id_075/create_stimuli/_report/report.rst",
+            "result": "/home/jlefortb/narps_open_pipelines/Afni_proc_through_nipype/_subject_id_075/create_stimuli/result_create_stimuli.pklz"
+        },
+        {
+            "group": 50,
+            "name": "157_create_stimuli",
+            "report": "/home/jlefortb/narps_open_pipelines/Afni_proc_through_nipype/_subject_id_114/create_stimuli/_report/report.rst",
+            "result": "/home/jlefortb/narps_open_pipelines/Afni_proc_through_nipype/_subject_id_114/create_stimuli/result_create_stimuli.pklz"
+        },
+        {
+            "group": 51,
+            "name": "158_create_stimuli",
+            "report": "/home/jlefortb/narps_open_pipelines/Afni_proc_through_nipype/_subject_id_072/create_stimuli/_report/report.rst",
+            "result": "/home/jlefortb/narps_open_pipelines/Afni_proc_through_nipype/_subject_id_072/create_stimuli/result_create_stimuli.pklz"
+        },
+        {
+            "group": 52,
+            "name": "159_create_stimuli",
+            "report": "/home/jlefortb/narps_open_pipelines/Afni_proc_through_nipype/_subject_id_044/create_stimuli/_report/report.rst",
+            "result": "/home/jlefortb/narps_open_pipelines/Afni_proc_through_nipype/_subject_id_044/create_stimuli/result_create_stimuli.pklz"
+        },
+        {
+            "group": 53,
+            "name": "160_create_stimuli",
+            "report": "/home/jlefortb/narps_open_pipelines/Afni_proc_through_nipype/_subject_id_102/create_stimuli/_report/report.rst",
+            "result": "/home/jlefortb/narps_open_pipelines/Afni_proc_through_nipype/_subject_id_102/create_stimuli/result_create_stimuli.pklz"
+        },
+        {
+            "group": 54,
+            "name": "161_create_stimuli",
+            "report": "/home/jlefortb/narps_open_pipelines/Afni_proc_through_nipype/_subject_id_099/create_stimuli/_report/report.rst",
+            "result": "/home/jlefortb/narps_open_pipelines/Afni_proc_through_nipype/_subject_id_099/create_stimuli/result_create_stimuli.pklz"
+        },
+        {
+            "group": 55,
+            "name": "162_create_stimuli",
+            "report": "/home/jlefortb/narps_open_pipelines/Afni_proc_through_nipype/_subject_id_088/create_stimuli/_report/report.rst",
+            "result": "/home/jlefortb/narps_open_pipelines/Afni_proc_through_nipype/_subject_id_088/create_stimuli/result_create_stimuli.pklz"
+        },
+        {
+            "group": 56,
+            "name": "163_create_stimuli",
+            "report": "/home/jlefortb/narps_open_pipelines/Afni_proc_through_nipype/_subject_id_064/create_stimuli/_report/report.rst",
+            "result": "/home/jlefortb/narps_open_pipelines/Afni_proc_through_nipype/_subject_id_064/create_stimuli/result_create_stimuli.pklz"
+        },
+        {
+            "group": 57,
+            "name": "164_create_stimuli",
+            "report": "/home/jlefortb/narps_open_pipelines/Afni_proc_through_nipype/_subject_id_063/create_stimuli/_report/report.rst",
+            "result": "/home/jlefortb/narps_open_pipelines/Afni_proc_through_nipype/_subject_id_063/create_stimuli/result_create_stimuli.pklz"
+        },
+        {
+            "group": 58,
+            "name": "165_create_stimuli",
+            "report": "/home/jlefortb/narps_open_pipelines/Afni_proc_through_nipype/_subject_id_017/create_stimuli/_report/report.rst",
+            "result": "/home/jlefortb/narps_open_pipelines/Afni_proc_through_nipype/_subject_id_017/create_stimuli/result_create_stimuli.pklz"
+        },
+        {
+            "group": 59,
+            "name": "166_create_stimuli",
+            "report": "/home/jlefortb/narps_open_pipelines/Afni_proc_through_nipype/_subject_id_117/create_stimuli/_report/report.rst",
+            "result": "/home/jlefortb/narps_open_pipelines/Afni_proc_through_nipype/_subject_id_117/create_stimuli/result_create_stimuli.pklz"
+        },
+        {
+            "group": 60,
+            "name": "167_create_stimuli",
+            "report": "/home/jlefortb/narps_open_pipelines/Afni_proc_through_nipype/_subject_id_056/create_stimuli/_report/report.rst",
+            "result": "/home/jlefortb/narps_open_pipelines/Afni_proc_through_nipype/_subject_id_056/create_stimuli/result_create_stimuli.pklz"
+        },
+        {
+            "group": 61,
+            "name": "168_create_stimuli",
+            "report": "/home/jlefortb/narps_open_pipelines/Afni_proc_through_nipype/_subject_id_019/create_stimuli/_report/report.rst",
+            "result": "/home/jlefortb/narps_open_pipelines/Afni_proc_through_nipype/_subject_id_019/create_stimuli/result_create_stimuli.pklz"
+        },
+        {
+            "group": 62,
+            "name": "169_create_stimuli",
+            "report": "/home/jlefortb/narps_open_pipelines/Afni_proc_through_nipype/_subject_id_022/create_stimuli/_report/report.rst",
+            "result": "/home/jlefortb/narps_open_pipelines/Afni_proc_through_nipype/_subject_id_022/create_stimuli/result_create_stimuli.pklz"
+        },
+        {
+            "group": 63,
+            "name": "170_create_stimuli",
+            "report": "/home/jlefortb/narps_open_pipelines/Afni_proc_through_nipype/_subject_id_024/create_stimuli/_report/report.rst",
+            "result": "/home/jlefortb/narps_open_pipelines/Afni_proc_through_nipype/_subject_id_024/create_stimuli/result_create_stimuli.pklz"
+        },
+        {
+            "group": 64,
+            "name": "171_create_stimuli",
+            "report": "/home/jlefortb/narps_open_pipelines/Afni_proc_through_nipype/_subject_id_090/create_stimuli/_report/report.rst",
+            "result": "/home/jlefortb/narps_open_pipelines/Afni_proc_through_nipype/_subject_id_090/create_stimuli/result_create_stimuli.pklz"
+        },
+        {
+            "group": 65,
+            "name": "172_create_stimuli",
+            "report": "/home/jlefortb/narps_open_pipelines/Afni_proc_through_nipype/_subject_id_124/create_stimuli/_report/report.rst",
+            "result": "/home/jlefortb/narps_open_pipelines/Afni_proc_through_nipype/_subject_id_124/create_stimuli/result_create_stimuli.pklz"
+        },
+        {
+            "group": 66,
+            "name": "173_create_stimuli",
+            "report": "/home/jlefortb/narps_open_pipelines/Afni_proc_through_nipype/_subject_id_067/create_stimuli/_report/report.rst",
+            "result": "/home/jlefortb/narps_open_pipelines/Afni_proc_through_nipype/_subject_id_067/create_stimuli/result_create_stimuli.pklz"
+        },
+        {
+            "group": 67,
+            "name": "174_create_stimuli",
+            "report": "/home/jlefortb/narps_open_pipelines/Afni_proc_through_nipype/_subject_id_094/create_stimuli/_report/report.rst",
+            "result": "/home/jlefortb/narps_open_pipelines/Afni_proc_through_nipype/_subject_id_094/create_stimuli/result_create_stimuli.pklz"
+        },
+        {
+            "group": 68,
+            "name": "175_create_stimuli",
+            "report": "/home/jlefortb/narps_open_pipelines/Afni_proc_through_nipype/_subject_id_039/create_stimuli/_report/report.rst",
+            "result": "/home/jlefortb/narps_open_pipelines/Afni_proc_through_nipype/_subject_id_039/create_stimuli/result_create_stimuli.pklz"
+        },
+        {
+            "group": 69,
+            "name": "176_create_stimuli",
+            "report": "/home/jlefortb/narps_open_pipelines/Afni_proc_through_nipype/_subject_id_074/create_stimuli/_report/report.rst",
+            "result": "/home/jlefortb/narps_open_pipelines/Afni_proc_through_nipype/_subject_id_074/create_stimuli/result_create_stimuli.pklz"
+        },
+        {
+            "group": 70,
+            "name": "177_create_stimuli",
+            "report": "/home/jlefortb/narps_open_pipelines/Afni_proc_through_nipype/_subject_id_030/create_stimuli/_report/report.rst",
+            "result": "/home/jlefortb/narps_open_pipelines/Afni_proc_through_nipype/_subject_id_030/create_stimuli/result_create_stimuli.pklz"
+        },
+        {
+            "group": 71,
+            "name": "178_create_stimuli",
+            "report": "/home/jlefortb/narps_open_pipelines/Afni_proc_through_nipype/_subject_id_050/create_stimuli/_report/report.rst",
+            "result": "/home/jlefortb/narps_open_pipelines/Afni_proc_through_nipype/_subject_id_050/create_stimuli/result_create_stimuli.pklz"
+        },
+        {
+            "group": 72,
+            "name": "179_create_stimuli",
+            "report": "/home/jlefortb/narps_open_pipelines/Afni_proc_through_nipype/_subject_id_001/create_stimuli/_report/report.rst",
+            "result": "/home/jlefortb/narps_open_pipelines/Afni_proc_through_nipype/_subject_id_001/create_stimuli/result_create_stimuli.pklz"
+        },
+        {
+            "group": 73,
+            "name": "180_create_stimuli",
+            "report": "/home/jlefortb/narps_open_pipelines/Afni_proc_through_nipype/_subject_id_119/create_stimuli/_report/report.rst",
+            "result": "/home/jlefortb/narps_open_pipelines/Afni_proc_through_nipype/_subject_id_119/create_stimuli/result_create_stimuli.pklz"
+        },
+        {
+            "group": 74,
+            "name": "181_create_stimuli",
+            "report": "/home/jlefortb/narps_open_pipelines/Afni_proc_through_nipype/_subject_id_032/create_stimuli/_report/report.rst",
+            "result": "/home/jlefortb/narps_open_pipelines/Afni_proc_through_nipype/_subject_id_032/create_stimuli/result_create_stimuli.pklz"
+        },
+        {
+            "group": 75,
+            "name": "182_create_stimuli",
+            "report": "/home/jlefortb/narps_open_pipelines/Afni_proc_through_nipype/_subject_id_100/create_stimuli/_report/report.rst",
+            "result": "/home/jlefortb/narps_open_pipelines/Afni_proc_through_nipype/_subject_id_100/create_stimuli/result_create_stimuli.pklz"
+        },
+        {
+            "group": 76,
+            "name": "183_create_stimuli",
+            "report": "/home/jlefortb/narps_open_pipelines/Afni_proc_through_nipype/_subject_id_015/create_stimuli/_report/report.rst",
+            "result": "/home/jlefortb/narps_open_pipelines/Afni_proc_through_nipype/_subject_id_015/create_stimuli/result_create_stimuli.pklz"
+        },
+        {
+            "group": 77,
+            "name": "184_create_stimuli",
+            "report": "/home/jlefortb/narps_open_pipelines/Afni_proc_through_nipype/_subject_id_103/create_stimuli/_report/report.rst",
+            "result": "/home/jlefortb/narps_open_pipelines/Afni_proc_through_nipype/_subject_id_103/create_stimuli/result_create_stimuli.pklz"
+        },
+        {
+            "group": 78,
+            "name": "185_create_stimuli",
+            "report": "/home/jlefortb/narps_open_pipelines/Afni_proc_through_nipype/_subject_id_045/create_stimuli/_report/report.rst",
+            "result": "/home/jlefortb/narps_open_pipelines/Afni_proc_through_nipype/_subject_id_045/create_stimuli/result_create_stimuli.pklz"
+        },
+        {
+            "group": 79,
+            "name": "186_create_stimuli",
+            "report": "/home/jlefortb/narps_open_pipelines/Afni_proc_through_nipype/_subject_id_084/create_stimuli/_report/report.rst",
+            "result": "/home/jlefortb/narps_open_pipelines/Afni_proc_through_nipype/_subject_id_084/create_stimuli/result_create_stimuli.pklz"
+        },
+        {
+            "group": 80,
+            "name": "187_create_stimuli",
+            "report": "/home/jlefortb/narps_open_pipelines/Afni_proc_through_nipype/_subject_id_059/create_stimuli/_report/report.rst",
+            "result": "/home/jlefortb/narps_open_pipelines/Afni_proc_through_nipype/_subject_id_059/create_stimuli/result_create_stimuli.pklz"
+        },
+        {
+            "group": 81,
+            "name": "188_create_stimuli",
+            "report": "/home/jlefortb/narps_open_pipelines/Afni_proc_through_nipype/_subject_id_025/create_stimuli/_report/report.rst",
+            "result": "/home/jlefortb/narps_open_pipelines/Afni_proc_through_nipype/_subject_id_025/create_stimuli/result_create_stimuli.pklz"
+        },
+        {
+            "group": 82,
+            "name": "189_create_stimuli",
+            "report": "/home/jlefortb/narps_open_pipelines/Afni_proc_through_nipype/_subject_id_112/create_stimuli/_report/report.rst",
+            "result": "/home/jlefortb/narps_open_pipelines/Afni_proc_through_nipype/_subject_id_112/create_stimuli/result_create_stimuli.pklz"
+        },
+        {
+            "group": 83,
+            "name": "190_create_stimuli",
+            "report": "/home/jlefortb/narps_open_pipelines/Afni_proc_through_nipype/_subject_id_009/create_stimuli/_report/report.rst",
+            "result": "/home/jlefortb/narps_open_pipelines/Afni_proc_through_nipype/_subject_id_009/create_stimuli/result_create_stimuli.pklz"
+        },
+        {
+            "group": 84,
+            "name": "191_create_stimuli",
+            "report": "/home/jlefortb/narps_open_pipelines/Afni_proc_through_nipype/_subject_id_115/create_stimuli/_report/report.rst",
+            "result": "/home/jlefortb/narps_open_pipelines/Afni_proc_through_nipype/_subject_id_115/create_stimuli/result_create_stimuli.pklz"
+        },
+        {
+            "group": 85,
+            "name": "192_create_stimuli",
+            "report": "/home/jlefortb/narps_open_pipelines/Afni_proc_through_nipype/_subject_id_073/create_stimuli/_report/report.rst",
+            "result": "/home/jlefortb/narps_open_pipelines/Afni_proc_through_nipype/_subject_id_073/create_stimuli/result_create_stimuli.pklz"
+        },
+        {
+            "group": 86,
+            "name": "193_create_stimuli",
+            "report": "/home/jlefortb/narps_open_pipelines/Afni_proc_through_nipype/_subject_id_027/create_stimuli/_report/report.rst",
+            "result": "/home/jlefortb/narps_open_pipelines/Afni_proc_through_nipype/_subject_id_027/create_stimuli/result_create_stimuli.pklz"
+        },
+        {
+            "group": 87,
+            "name": "194_create_stimuli",
+            "report": "/home/jlefortb/narps_open_pipelines/Afni_proc_through_nipype/_subject_id_104/create_stimuli/_report/report.rst",
+            "result": "/home/jlefortb/narps_open_pipelines/Afni_proc_through_nipype/_subject_id_104/create_stimuli/result_create_stimuli.pklz"
+        },
+        {
+            "group": 88,
+            "name": "195_create_stimuli",
+            "report": "/home/jlefortb/narps_open_pipelines/Afni_proc_through_nipype/_subject_id_083/create_stimuli/_report/report.rst",
+            "result": "/home/jlefortb/narps_open_pipelines/Afni_proc_through_nipype/_subject_id_083/create_stimuli/result_create_stimuli.pklz"
+        },
+        {
+            "group": 89,
+            "name": "196_create_stimuli",
+            "report": "/home/jlefortb/narps_open_pipelines/Afni_proc_through_nipype/_subject_id_095/create_stimuli/_report/report.rst",
+            "result": "/home/jlefortb/narps_open_pipelines/Afni_proc_through_nipype/_subject_id_095/create_stimuli/result_create_stimuli.pklz"
+        },
+        {
+            "group": 90,
+            "name": "197_create_stimuli",
+            "report": "/home/jlefortb/narps_open_pipelines/Afni_proc_through_nipype/_subject_id_037/create_stimuli/_report/report.rst",
+            "result": "/home/jlefortb/narps_open_pipelines/Afni_proc_through_nipype/_subject_id_037/create_stimuli/result_create_stimuli.pklz"
+        },
+        {
+            "group": 91,
+            "name": "198_create_stimuli",
+            "report": "/home/jlefortb/narps_open_pipelines/Afni_proc_through_nipype/_subject_id_051/create_stimuli/_report/report.rst",
+            "result": "/home/jlefortb/narps_open_pipelines/Afni_proc_through_nipype/_subject_id_051/create_stimuli/result_create_stimuli.pklz"
+        },
+        {
+            "group": 92,
+            "name": "199_create_stimuli",
+            "report": "/home/jlefortb/narps_open_pipelines/Afni_proc_through_nipype/_subject_id_107/create_stimuli/_report/report.rst",
+            "result": "/home/jlefortb/narps_open_pipelines/Afni_proc_through_nipype/_subject_id_107/create_stimuli/result_create_stimuli.pklz"
+        },
+        {
+            "group": 93,
+            "name": "200_create_stimuli",
+            "report": "/home/jlefortb/narps_open_pipelines/Afni_proc_through_nipype/_subject_id_052/create_stimuli/_report/report.rst",
+            "result": "/home/jlefortb/narps_open_pipelines/Afni_proc_through_nipype/_subject_id_052/create_stimuli/result_create_stimuli.pklz"
+        },
+        {
+            "group": 94,
+            "name": "201_create_stimuli",
+            "report": "/home/jlefortb/narps_open_pipelines/Afni_proc_through_nipype/_subject_id_087/create_stimuli/_report/report.rst",
+            "result": "/home/jlefortb/narps_open_pipelines/Afni_proc_through_nipype/_subject_id_087/create_stimuli/result_create_stimuli.pklz"
+        },
+        {
+            "group": 95,
+            "name": "202_create_stimuli",
+            "report": "/home/jlefortb/narps_open_pipelines/Afni_proc_through_nipype/_subject_id_060/create_stimuli/_report/report.rst",
+            "result": "/home/jlefortb/narps_open_pipelines/Afni_proc_through_nipype/_subject_id_060/create_stimuli/result_create_stimuli.pklz"
+        },
+        {
+            "group": 96,
+            "name": "203_create_stimuli",
+            "report": "/home/jlefortb/narps_open_pipelines/Afni_proc_through_nipype/_subject_id_035/create_stimuli/_report/report.rst",
+            "result": "/home/jlefortb/narps_open_pipelines/Afni_proc_through_nipype/_subject_id_035/create_stimuli/result_create_stimuli.pklz"
+        },
+        {
+            "group": 97,
+            "name": "204_create_stimuli",
+            "report": "/home/jlefortb/narps_open_pipelines/Afni_proc_through_nipype/_subject_id_070/create_stimuli/_report/report.rst",
+            "result": "/home/jlefortb/narps_open_pipelines/Afni_proc_through_nipype/_subject_id_070/create_stimuli/result_create_stimuli.pklz"
+        },
+        {
+            "group": 98,
+            "name": "205_create_stimuli",
+            "report": "/home/jlefortb/narps_open_pipelines/Afni_proc_through_nipype/_subject_id_081/create_stimuli/_report/report.rst",
+            "result": "/home/jlefortb/narps_open_pipelines/Afni_proc_through_nipype/_subject_id_081/create_stimuli/result_create_stimuli.pklz"
+        },
+        {
+            "group": 99,
+            "name": "206_create_stimuli",
+            "report": "/home/jlefortb/narps_open_pipelines/Afni_proc_through_nipype/_subject_id_120/create_stimuli/_report/report.rst",
+            "result": "/home/jlefortb/narps_open_pipelines/Afni_proc_through_nipype/_subject_id_120/create_stimuli/result_create_stimuli.pklz"
+        },
+        {
+            "group": 100,
+            "name": "207_create_stimuli",
+            "report": "/home/jlefortb/narps_open_pipelines/Afni_proc_through_nipype/_subject_id_109/create_stimuli/_report/report.rst",
+            "result": "/home/jlefortb/narps_open_pipelines/Afni_proc_through_nipype/_subject_id_109/create_stimuli/result_create_stimuli.pklz"
+        },
+        {
+            "group": 101,
+            "name": "208_create_stimuli",
+            "report": "/home/jlefortb/narps_open_pipelines/Afni_proc_through_nipype/_subject_id_036/create_stimuli/_report/report.rst",
+            "result": "/home/jlefortb/narps_open_pipelines/Afni_proc_through_nipype/_subject_id_036/create_stimuli/result_create_stimuli.pklz"
+        },
+        {
+            "group": 102,
+            "name": "209_create_stimuli",
+            "report": "/home/jlefortb/narps_open_pipelines/Afni_proc_through_nipype/_subject_id_006/create_stimuli/_report/report.rst",
+            "result": "/home/jlefortb/narps_open_pipelines/Afni_proc_through_nipype/_subject_id_006/create_stimuli/result_create_stimuli.pklz"
+        },
+        {
+            "group": 103,
+            "name": "210_create_stimuli",
+            "report": "/home/jlefortb/narps_open_pipelines/Afni_proc_through_nipype/_subject_id_098/create_stimuli/_report/report.rst",
+            "result": "/home/jlefortb/narps_open_pipelines/Afni_proc_through_nipype/_subject_id_098/create_stimuli/result_create_stimuli.pklz"
+        },
+        {
+            "group": 104,
+            "name": "211_create_stimuli",
+            "report": "/home/jlefortb/narps_open_pipelines/Afni_proc_through_nipype/_subject_id_014/create_stimuli/_report/report.rst",
+            "result": "/home/jlefortb/narps_open_pipelines/Afni_proc_through_nipype/_subject_id_014/create_stimuli/result_create_stimuli.pklz"
+        },
+        {
+            "group": 105,
+            "name": "212_create_stimuli",
+            "report": "/home/jlefortb/narps_open_pipelines/Afni_proc_through_nipype/_subject_id_062/create_stimuli/_report/report.rst",
+            "result": "/home/jlefortb/narps_open_pipelines/Afni_proc_through_nipype/_subject_id_062/create_stimuli/result_create_stimuli.pklz"
+        },
+        {
+            "group": 106,
+            "name": "213_create_stimuli",
+            "report": "/home/jlefortb/narps_open_pipelines/Afni_proc_through_nipype/_subject_id_113/create_stimuli/_report/report.rst",
+            "result": "/home/jlefortb/narps_open_pipelines/Afni_proc_through_nipype/_subject_id_113/create_stimuli/result_create_stimuli.pklz"
+        },
+        {
+            "group": 107,
+            "name": "214_create_stimuli",
+            "report": "/home/jlefortb/narps_open_pipelines/Afni_proc_through_nipype/_subject_id_068/create_stimuli/_report/report.rst",
+            "result": "/home/jlefortb/narps_open_pipelines/Afni_proc_through_nipype/_subject_id_068/create_stimuli/result_create_stimuli.pklz"
+        },
+        {
+            "group": 108,
+            "name": "215_create_stimuli",
+            "report": "/home/jlefortb/narps_open_pipelines/Afni_proc_through_nipype/_subject_id_054/create_stimuli/_report/report.rst",
+            "result": "/home/jlefortb/narps_open_pipelines/Afni_proc_through_nipype/_subject_id_054/create_stimuli/result_create_stimuli.pklz"
+        },
+        {
+            "group": 109,
+            "name": "216_create_stimuli",
+            "report": "/home/jlefortb/narps_open_pipelines/Afni_proc_through_nipype/_subject_id_080/create_stimuli/_report/report.rst",
+            "result": "/home/jlefortb/narps_open_pipelines/Afni_proc_through_nipype/_subject_id_080/create_stimuli/result_create_stimuli.pklz"
+        }
+    ]
+}

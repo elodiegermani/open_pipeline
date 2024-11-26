@@ -1,0 +1,14 @@
+[
+    [
+        "data_dir",
+        "/home/jlefortb/narps_open_pipelines/data/original/ds001734/"
+    ],
+    [
+        "function_str",
+        "def create_stimuli_file(subject, data_dir):\n    # create 1D stimuli file :\n    import pandas as pd \n    from os.path import join as opj\n    df_run1 = pd.read_csv(opj(data_dir, \"sub-{}/func/sub-{}_task-MGT_run-01_events.tsv\".format(subject, subject)), sep=\"\\t\")\n    df_run1 = df_run1[[\"onset\", \"gain\", \"loss\"]].T\n    df_run2 = pd.read_csv(opj(data_dir, \"sub-{}/func/sub-{}_task-MGT_run-02_events.tsv\".format(subject, subject)), sep=\"\\t\")\n    df_run2 = df_run2[[\"onset\", \"gain\", \"loss\"]].T\n    df_run3 = pd.read_csv(opj(data_dir, \"sub-{}/func/sub-{}_task-MGT_run-03_events.tsv\".format(subject, subject)), sep=\"\\t\")\n    df_run3 = df_run3[[\"onset\", \"gain\", \"loss\"]].T\n    df_run4 = pd.read_csv(opj(data_dir, \"sub-{}/func/sub-{}_task-MGT_run-04_events.tsv\".format(subject, subject)), sep=\"\\t\")\n    df_run4 = df_run4[[\"onset\", \"gain\", \"loss\"]].T\n\n    df_gain = pd.DataFrame(index=range(0,4), columns=range(0,64))\n    df_gain.loc[0] = [\"{}*{}\".format(df_run1[col].loc['onset'], df_run1[col].loc['gain']) for col in range(0, 64)]\n    df_gain.loc[1] = [\"{}*{}\".format(df_run2[col].loc['onset'], df_run2[col].loc['gain']) for col in range(0, 64)]\n    df_gain.loc[2] = [\"{}*{}\".format(df_run3[col].loc['onset'], df_run3[col].loc['gain']) for col in range(0, 64)]\n    df_gain.loc[3] = [\"{}*{}\".format(df_run4[col].loc['onset'], df_run4[col].loc['gain']) for col in range(0, 64)]\n    df_loss = pd.DataFrame(index=range(0,4), columns=range(0,64))\n    df_loss.loc[0] = [\"{}*{}\".format(df_run1[col].loc['onset'], df_run1[col].loc['loss']) for col in range(0, 64)]\n    df_loss.loc[1] = [\"{}*{}\".format(df_run2[col].loc['onset'], df_run2[col].loc['loss']) for col in range(0, 64)]\n    df_loss.loc[2] = [\"{}*{}\".format(df_run3[col].loc['onset'], df_run3[col].loc['loss']) for col in range(0, 64)]\n    df_loss.loc[3] = [\"{}*{}\".format(df_run4[col].loc['onset'], df_run4[col].loc['loss']) for col in range(0, 64)]\n\n    df_gain.to_csv(opj(data_dir, \"sub-{}/func/times+gain.1D\".format(subject)), \n            sep='\\t', index=False, header=False)\n    df_loss.to_csv(opj(data_dir, \"sub-{}/func/times+loss.1D\".format(subject)), \n            sep='\\t', index=False, header=False)\n    print(\"Done\")\n"
+    ],
+    [
+        "subject",
+        "085"
+    ]
+]
