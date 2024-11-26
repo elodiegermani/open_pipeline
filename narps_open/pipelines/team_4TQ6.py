@@ -15,7 +15,7 @@ from nipype.interfaces.fsl import (
     FSLCommand, Randomise
     )
 from nipype.algorithms.modelgen import SpecifyModel
-from nipype.interfaces.fsl.maths import MultiImageMaths
+from nipype.interfaces.fsl.maths import MultiImageMaths, MathsCommand
 
 from narps_open.utils.configuration import Configuration
 from narps_open.pipelines import Pipeline
@@ -430,6 +430,19 @@ class PipelineTeam4TQ6(Pipeline):
         group_level.connect(select_files, 'cope', get_copes, 'input_str')
 
         # Function Node elements_in_string
+        #   Get masks for these subjects
+        # Note : using a MapNode with elements_in_string requires using clean_list to remove
+        #   None values from the out_list
+        get_masks = MapNode(Function(
+            function = elements_in_string,
+            input_names = ['input_str', 'elements'],
+            output_names = ['out_list']
+            ),
+            name = 'get_masks', iterfield = 'input_str'
+        )
+        group_level.connect(select_files, 'masks', get_masks, 'input_str')
+
+        # Function Node elements_in_string
         #   Get variance of the estimated copes (varcope) for these subjects
         # Note : using a MapNode with elements_in_string requires using clean_list to remove
         #   None values from the out_list
@@ -452,18 +465,16 @@ class PipelineTeam4TQ6(Pipeline):
         merge_varcopes.inputs.dimension = 't'
         group_level.connect(get_varcopes, ('out_list', clean_list), merge_varcopes, 'in_files')
 
-        # Split Node - Split mask list to serve them as inputs of the MultiImageMaths node.
-        split_masks = Node(Split(), name = 'split_masks')
-        split_masks.inputs.splits = [1, len(self.subject_list) - 1]
-        split_masks.inputs.squeeze = True # Unfold one-element splits removing the list
-        group_level.connect(select_files, 'masks', split_masks, 'inlist')
+        # Merge Node - Merge masks for further intersection
+        merge_masks = Node(Merge(), name = 'merge_masks')
+        merge_masks.inputs.dimension = 't'
+        group_level.connect(get_masks, ('out_list', clean_list), merge_masks, 'in_files')
 
-        # MultiImageMaths Node - Create a subject mask by
-        #   computing the intersection of all run masks.
-        mask_intersection = Node(MultiImageMaths(), name = 'mask_intersection')
-        mask_intersection.inputs.op_string = '-mul %s ' * (len(self.subject_list) - 1)
-        group_level.connect(split_masks, 'out1', mask_intersection, 'in_file')
-        group_level.connect(split_masks, 'out2', mask_intersection, 'operand_files')
+        # MathsCommand Node - Create a group mask by
+        #   computing the intersection of all subject masks.
+        mask_intersection = Node(MathsCommand(), name = 'mask_intersection')
+        mask_intersection.inputs.args = '-Tmin -thr 0.9'
+        group_level.connect(merge_masks, 'merged_file', mask_intersection, 'in_file')
 
         # MultipleRegressDesign Node - Specify model
         specify_model = Node(MultipleRegressDesign(), name = 'specify_model')
@@ -519,6 +530,7 @@ class PipelineTeam4TQ6(Pipeline):
             get_group_subjects.inputs.list_2 = self.subject_list
             group_level.connect(get_group_subjects, 'out_list', get_copes, 'elements')
             group_level.connect(get_group_subjects, 'out_list', get_varcopes, 'elements')
+            group_level.connect(get_group_subjects, 'out_list', get_masks, 'elements')
 
             # Function Node get_one_sample_t_test_regressors
             #   Get regressors in the equalRange and equalIndifference method case
@@ -539,6 +551,7 @@ class PipelineTeam4TQ6(Pipeline):
             #   Indeed the SelectFiles node asks for all (*) subjects available
             get_copes.inputs.elements = self.subject_list
             get_varcopes.inputs.elements = self.subject_list
+            get_masks.inputs.elements = self.subject_list
 
             # Setup a two sample t-test
             specify_model.inputs.contrasts = [
