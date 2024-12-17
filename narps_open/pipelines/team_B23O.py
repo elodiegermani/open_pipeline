@@ -12,7 +12,7 @@ from nipype.interfaces.io import SelectFiles, DataSink
 from nipype.interfaces.fsl import (
     Level1Design, FEATModel, FilterRegressor,
     L2Model, Merge, FLAMEO, FILMGLS, MultipleRegressDesign,
-    FSLCommand, Randomise
+    FSLCommand, Randomise, ImageMaths
     )
 from nipype.algorithms.modelgen import SpecifyModel
 from nipype.interfaces.fsl.maths import MathsCommand
@@ -140,6 +140,8 @@ class PipelineTeamB23O(Pipeline):
         templates = {
             'func' : join('derivatives', 'fmriprep', 'sub-{subject_id}', 'func',
                 'sub-{subject_id}_task-MGT_run-{run_id}_bold_space-MNI152NLin2009cAsym_preproc.nii.gz'),
+            'mask' : join('derivatives', 'fmriprep', 'sub-{subject_id}', 'func',
+                'sub-{subject_id}_task-MGT_run-{run_id}_bold_space-MNI152NLin2009cAsym_brainmask.nii.gz'),
             'events' : join('sub-{subject_id}', 'func',
                 'sub-{subject_id}_task-MGT_run-{run_id}_events.tsv'),
             'confounds' : join('derivatives', 'fmriprep', 'sub-{subject_id}', 'func',
@@ -163,15 +165,27 @@ class PipelineTeamB23O(Pipeline):
             function = self.get_confounds_file,
             input_names = ['filepath', 'subject_id', 'run_id'],
             output_names = ['confounds_file']),
-             name = 'confounds')
+            name = 'confounds')
         run_level.connect(information_source, 'subject_id', confounds, 'subject_id')
         run_level.connect(information_source, 'run_id', confounds, 'run_id')
         run_level.connect(select_files, 'confounds', confounds, 'filepath')
 
+        # ImageMaths Node - Change input data type to float
+        convert_to_float = Node(ImageMaths(), name = 'convert_to_float')
+        convert_to_float.inputs.out_data_type = 'float'
+        convert_to_float.inputs.op_string = ''
+        run_level.connect(select_files, 'func', convert_to_float, 'in_file')
+
+        # ImageMaths Node - Mask the input func file
+        mask_func = Node(ImageMaths(), name = 'mask_func')
+        mask_func.inputs.op_string = '-mas'
+        run_level.connect(convert_to_float, 'out_file', mask_func, 'in_file')
+        run_level.connect(select_files, 'mask', mask_func, 'in_file2')
+
         # FilterRegressor Node - Denoise func data using confounds
         noise_removal = Node(FilterRegressor(), name = 'noise_removal')
         noise_removal.inputs.filter_all = True
-        run_level.connect(select_files, 'func', noise_removal, 'in_file')
+        run_level.connect(mask_func, 'out_file', noise_removal, 'in_file')
         run_level.connect(confounds, 'confounds_file', noise_removal, 'design_file')
 
         # SpecifyModel Node - Generate run level model
@@ -187,6 +201,11 @@ class PipelineTeamB23O(Pipeline):
         model_design.inputs.bases = {'dgamma' : {'derivs' : True}}
         model_design.inputs.interscan_interval = TaskInformation()['RepetitionTime']
         model_design.inputs.model_serial_correlations = True
+        model_design.inputs.orthogonalization = {
+            1: {0: False, 1: False, 2: False, 3: False}, # 1st regressor "Trial" not orthogonalized
+            2: {0: True, 1: True, 2: False, 3: True}, # 2nd regressor "Gain" orth with 1st and 3rd
+            3: {0: True, 1: True, 2: True, 3: False}, # 3rd regressor "Loss" orth with 1st and 2nd
+            }
         model_design.inputs.contrasts = self.run_level_contrasts
         run_level.connect(specify_model, 'session_info', model_design, 'session_info')
 
@@ -196,10 +215,11 @@ class PipelineTeamB23O(Pipeline):
         run_level.connect(model_design, 'fsf_files', model_generation, 'fsf_file')
 
         # FILMGLS Node - Estimate first level model
-        model_estimate = Node(FILMGLS(), name='model_estimate')
-        model_estimate.inputs.output_pwdata = True
+        model_estimate = Node(FILMGLS(), name = 'model_estimate')
         model_estimate.inputs.smooth_autocorr = True
-        run_level.connect(select_files, 'func', model_estimate, 'in_file')
+        # Default value for threshold is -1000.0 although nipype's documentation says 1000.0
+        model_estimate.inputs.threshold = 1000.0
+        run_level.connect(noise_removal, 'out_file', model_estimate, 'in_file')
         run_level.connect(model_generation, 'con_file', model_estimate, 'tcon_file')
         run_level.connect(model_generation, 'design_file', model_estimate, 'design_file')
 
@@ -286,13 +306,25 @@ class PipelineTeamB23O(Pipeline):
         merge_masks.inputs.dimension = 't'
         subject_level.connect(select_files, 'masks', merge_masks, 'in_files')
 
-        # MathsCommand Node - Create a subject mask by
+        # ImageMaths Node - Create a subject mask by
         #   computing the intersection of all run masks.
-        mask_intersection = Node(MathsCommand(), name = 'mask_intersection')
-        mask_intersection.inputs.args = '-Tmin -thr 0.9'
+        mask_intersection = Node(ImageMaths(), name = 'mask_intersection')
+        mask_intersection.inputs.args = '-Tmin'
         subject_level.connect(merge_masks, 'merged_file', mask_intersection, 'in_file')
 
-        # L2Model Node - Generate subject specific second level model
+        # ImageMaths Node - Masking copes
+        mask_copes = Node(ImageMaths(), name = 'mask_copes')
+        mask_copes.inputs.op_string = '-mas'
+        subject_level.connect(merge_copes, 'merged_file', mask_copes, 'in_file')
+        subject_level.connect(mask_intersection, 'out_file', mask_copes, 'in_file2')
+
+        # ImageMaths Node - Masking varcopes
+        mask_varcopes = Node(ImageMaths(), name = 'mask_varcopes')
+        mask_varcopes.inputs.op_string = '-mas'
+        subject_level.connect(merge_varcopes, 'merged_file', mask_varcopes, 'in_file')
+        subject_level.connect(mask_intersection, 'out_file', mask_varcopes, 'in_file2')
+
+        # MultipleRegressDesign Node - Generate subject specific second level model
         generate_model = Node(L2Model(), name = 'generate_model')
         generate_model.inputs.num_copes = len(self.run_list)
 
@@ -300,8 +332,8 @@ class PipelineTeamB23O(Pipeline):
         estimate_model = Node(FLAMEO(), name = 'estimate_model')
         estimate_model.inputs.run_mode = 'flame1'
         subject_level.connect(mask_intersection, 'out_file', estimate_model, 'mask_file')
-        subject_level.connect(merge_copes, 'merged_file', estimate_model, 'cope_file')
-        subject_level.connect(merge_varcopes, 'merged_file', estimate_model, 'var_cope_file')
+        subject_level.connect(mask_copes, 'out_file', estimate_model, 'cope_file')
+        subject_level.connect(mask_varcopes, 'out_file', estimate_model, 'var_cope_file')
         subject_level.connect(generate_model, 'design_mat', estimate_model, 'design_file')
         subject_level.connect(generate_model, 'design_con', estimate_model, 't_con_file')
         subject_level.connect(generate_model, 'design_grp', estimate_model, 'cov_split_file')
@@ -492,53 +524,23 @@ class PipelineTeamB23O(Pipeline):
 
         # MathsCommand Node - Create a subject mask by
         #   computing the intersection of all run masks
-        #   (all voxels included in at least 80% of masks across all runs).
         mask_intersection = Node(MathsCommand(), name = 'mask_intersection')
-        mask_intersection.inputs.args = '-Tmin -thr 0.9'
+        mask_intersection.inputs.args = '-Tmin'
         group_level.connect(merge_masks, 'merged_file', mask_intersection, 'in_file')
 
-        # MultipleRegressDesign Node - Specify model
-        specify_model = Node(MultipleRegressDesign(), name = 'specify_model')
+        # ImageMaths Node - Apply mask to copes
+        mask_copes = Node(ImageMaths(), name = 'mask_copes')
+        mask_copes.inputs.op_string = '-mas'
+        group_level.connect(merge_copes, 'merged_file', mask_copes, 'in_file')
+        group_level.connect(mask_intersection, 'out_file', mask_copes, 'in_file2')
 
-        # FLAMEO Node - Estimate model
-        estimate_model = Node(FLAMEO(), name = 'estimate_model')
-        estimate_model.inputs.run_mode = 'flame1'
-        group_level.connect(mask_intersection, 'out_file', estimate_model, 'mask_file')
-        group_level.connect(merge_copes, 'merged_file', estimate_model, 'cope_file')
-        group_level.connect(merge_varcopes, 'merged_file', estimate_model, 'var_cope_file')
-        group_level.connect(specify_model, 'design_mat', estimate_model, 'design_file')
-        group_level.connect(specify_model, 'design_con', estimate_model, 't_con_file')
-        group_level.connect(specify_model, 'design_grp', estimate_model, 'cov_split_file')
-
-        # Randomise Node - Perform clustering on statistical output
-        randomise = Node(Randomise(), name = 'randomise')
-        randomise.inputs.tfce = True
-        randomise.inputs.num_perm = 5000
-        randomise.inputs.c_thresh = 0.05
-        group_level.connect(mask_intersection, 'out_file', randomise, 'mask')
-        group_level.connect(merge_copes, 'merged_file', randomise, 'in_file')
-        group_level.connect(specify_model, 'design_con', randomise, 'tcon')
-        group_level.connect(specify_model, 'design_mat', randomise, 'design_mat')
-
-        # Datasink Node - Save important files
-        data_sink = Node(DataSink(), name = 'data_sink')
-        data_sink.inputs.base_directory = self.directories.output_dir
-        group_level.connect(estimate_model, 'zstats', data_sink,
-            f'group_level_analysis_{method}_nsub_{nb_subjects}.@zstats')
-        group_level.connect(estimate_model, 'tstats', data_sink,
-            f'group_level_analysis_{method}_nsub_{nb_subjects}.@tstats')
-        group_level.connect(randomise,'t_corrected_p_files', data_sink,
-            f'group_level_analysis_{method}_nsub_{nb_subjects}.@t_corrected_p_files')
-        group_level.connect(randomise,'tstat_files', data_sink,
-            f'group_level_analysis_{method}_nsub_{nb_subjects}.@tstat_files')
+        # ImageMaths Node - Apply mask to varcopes
+        mask_varcopes = Node(ImageMaths(), name = 'mask_varcopes')
+        mask_varcopes.inputs.op_string = '-mas'
+        group_level.connect(merge_varcopes, 'merged_file', mask_varcopes, 'in_file')
+        group_level.connect(mask_intersection, 'out_file', mask_varcopes, 'in_file2')
 
         if method in ('equalIndifference', 'equalRange'):
-            # Setup a one sample t-test
-            specify_model.inputs.contrasts = [
-                ['group_mean', 'T', ['group_mean'], [1]],
-                ['group_mean_neg', 'T', ['group_mean'], [-1]]
-                ]
-
             # Function Node get_group_subjects - Get subjects in the group and in the subject_list
             get_group_subjects = Node(Function(
                 function = list_intersection,
@@ -564,20 +566,21 @@ class PipelineTeamB23O(Pipeline):
                 name = 'regressors_one_sample',
             )
             group_level.connect(get_group_subjects, 'out_list', regressors_one_sample, 'subject_list')
+
+            # Setup a one sample t-test
+            specify_model = Node(MultipleRegressDesign(), name = 'specify_model')
+            specify_model.inputs.contrasts = [
+                ['group_mean', 'T', ['group_mean'], [1]],
+                ['group_mean_neg', 'T', ['group_mean'], [-1]]
+                ]
             group_level.connect(regressors_one_sample, 'regressors', specify_model, 'regressors')
 
         elif method == 'groupComp':
-
             # Select copes and varcopes corresponding to the selected subjects
             #   Indeed the SelectFiles node asks for all (*) subjects available
             get_copes.inputs.elements = self.subject_list
             get_varcopes.inputs.elements = self.subject_list
             get_masks.inputs.elements = self.subject_list
-
-            # Setup a two sample t-test
-            specify_model.inputs.contrasts = [
-                ['equalRange_sup', 'T', ['equalRange', 'equalIndifference'], [1, -1]]
-            ]
 
             # Function Node get_equal_range_subjects
             #   Get subjects in the equalRange group and in the subject_list
@@ -618,15 +621,51 @@ class PipelineTeamB23O(Pipeline):
                 name = 'regressors_two_sample',
             )
             regressors_two_sample.inputs.subject_list = self.subject_list
-
-            # Add missing connections
             group_level.connect(
                 get_equal_range_subjects, 'out_list', regressors_two_sample, 'equal_range_ids')
             group_level.connect(
                 get_equal_indifference_subjects, 'out_list',
                 regressors_two_sample, 'equal_indifference_ids')
+
+            # Setup a two sample t-test
+            specify_model = Node(MultipleRegressDesign(), name = 'specify_model')
+            specify_model.inputs.contrasts = [
+                ['equalRange_sup', 'T', ['equalRange', 'equalIndifference'], [1, -1]]
+            ]
             group_level.connect(regressors_two_sample, 'regressors', specify_model, 'regressors')
             group_level.connect(regressors_two_sample, 'groups', specify_model, 'groups')
+
+        # FLAMEO Node - Estimate model
+        estimate_model = Node(FLAMEO(), name = 'estimate_model')
+        estimate_model.inputs.run_mode = 'flame1'
+        group_level.connect(mask_intersection, 'out_file', estimate_model, 'mask_file')
+        group_level.connect(mask_copes, 'out_file', estimate_model, 'cope_file')
+        group_level.connect(mask_varcopes, 'out_file', estimate_model, 'var_cope_file')
+        group_level.connect(specify_model, 'design_mat', estimate_model, 'design_file')
+        group_level.connect(specify_model, 'design_con', estimate_model, 't_con_file')
+        group_level.connect(specify_model, 'design_grp', estimate_model, 'cov_split_file')
+
+        # Randomise Node - Perform clustering on statistical output
+        randomise = Node(Randomise(), name = 'randomise')
+        randomise.inputs.tfce = True
+        randomise.inputs.num_perm = 5000
+        randomise.inputs.c_thresh = 0.05
+        group_level.connect(mask_intersection, 'out_file', randomise, 'mask')
+        group_level.connect(mask_copes, 'out_file', randomise, 'in_file')
+        group_level.connect(specify_model, 'design_con', randomise, 'tcon')
+        group_level.connect(specify_model, 'design_mat', randomise, 'design_mat')
+
+        # Datasink Node - Save important files
+        data_sink = Node(DataSink(), name = 'data_sink')
+        data_sink.inputs.base_directory = self.directories.output_dir
+        group_level.connect(estimate_model, 'zstats', data_sink,
+            f'group_level_analysis_{method}_nsub_{nb_subjects}.@zstats')
+        group_level.connect(estimate_model, 'tstats', data_sink,
+            f'group_level_analysis_{method}_nsub_{nb_subjects}.@tstats')
+        group_level.connect(randomise,'t_corrected_p_files', data_sink,
+            f'group_level_analysis_{method}_nsub_{nb_subjects}.@t_corrected_p_files')
+        group_level.connect(randomise,'tstat_files', data_sink,
+            f'group_level_analysis_{method}_nsub_{nb_subjects}.@tstat_files')
 
         return group_level
 
