@@ -21,7 +21,7 @@ implemented_pipelines = {
     '27SS': None,
     '2T6S': 'PipelineTeam2T6S',
     '2T7P': None,
-    '3C6G': None,
+    '3C6G': 'PipelineTeam3C6G',
     '3PQ2': None,
     '3TR7': 'PipelineTeam3TR7',
     '43FJ': None,
