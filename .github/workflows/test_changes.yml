@@ -19,7 +19,7 @@ jobs:
       tests: ${{ steps.identify.outputs.tests }}
     steps:
     - name: Checkout main branch for comparison
-      uses: actions/checkout@v3
+      uses: actions/checkout@v4
       with:
         fetch-depth: 0
 
@@ -45,7 +45,7 @@ jobs:
     timeout-minutes: 2880 # 48h
     steps:
     - name: Checkout PR branch
-      uses: actions/checkout@v3
+      uses: actions/checkout@v4
 
     - name: Load configuration for self-hosted runner
       run: cp /home/neuro/local_testing_config.toml narps_open/utils/configuration/testing_config.toml
