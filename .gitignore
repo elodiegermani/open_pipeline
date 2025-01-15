@@ -142,3 +142,6 @@ dmypy.json
 
 # For mac users
 *.DS_Store
+
+# PyCharm project settings
+.idea
